@@ -1,7 +1,9 @@
 
 function App () {
   return (
-    <div>App</div>
+    <div>
+      <h1> Hello Herbo botanica </h1>
+    </div>
   )
 }
 
