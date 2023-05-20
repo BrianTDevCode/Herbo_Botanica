@@ -54,10 +54,14 @@
     cursor: pointer;
   }
   
-  .show-subcategories .header__sub-ul {
-    display: block;
+  .header__li.active {
+    border-bottom: 2px solid green;
+  }
+  
+  .header__sub-ul {
+    display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5px);
     left: 0;
     background-color: #fff;
     padding: 10px;
@@ -65,5 +69,14 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 20px;
+  }
+  
+  .header__li:hover .header__sub-ul,
+  .header__li.active .header__sub-ul {
+    display: block;
+  }
+  
+  .header__li:hover:not(.active) {
+    border-bottom: 2px solid green;
   }
   
