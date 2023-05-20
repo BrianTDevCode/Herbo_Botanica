@@ -20,7 +20,7 @@ const NavBar = () => {
           <li className="header__li">Herbo Pets</li>
           <li className="header__li">Sahumos</li>
           <li className="header__li">Hermo Home</li>
-          <li className="header__li">Formulas Florales</li>
+          <li className="header__li">Formulas Floral</li>
           <li className="header__li">Aromaterapias</li>
         </ul>
       </nav>
