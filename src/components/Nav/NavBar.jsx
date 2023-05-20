@@ -8,7 +8,8 @@ const NavBar = () => {
   const activeCategoryRef = useRef("");
 
   const handleCategoryClick = (category) => {
-    activeCategoryRef.current = activeCategoryRef.current === category ? "" : category;
+    activeCategoryRef.current =
+      activeCategoryRef.current === category ? "" : category;
   };
 
   return (
@@ -26,7 +27,9 @@ const NavBar = () => {
       <nav className="header__nav">
         <ul className="header__ul">
           <li
-            className={`header__li ${activeCategoryRef.current === "Herbo Pets" ? "active" : ""}`}
+            className={`header__li ${
+              activeCategoryRef.current === "Herbo Pets" ? "active" : ""
+            }`}
             onClick={() => handleCategoryClick("Herbo Pets")}
           >
             Herbo Pets
@@ -36,7 +39,9 @@ const NavBar = () => {
             </ul>
           </li>
           <li
-            className={`header__li ${activeCategoryRef.current === "Sahumos" ? "active" : ""}`}
+            className={`header__li ${
+              activeCategoryRef.current === "Sahumos" ? "active" : ""
+            }`}
             onClick={() => handleCategoryClick("Sahumos")}
           >
             Sahumos
@@ -47,7 +52,9 @@ const NavBar = () => {
             </ul>
           </li>
           <li
-            className={`header__li ${activeCategoryRef.current === "Hermo Home" ? "active" : ""}`}
+            className={`header__li ${
+              activeCategoryRef.current === "Hermo Home" ? "active" : ""
+            }`}
             onClick={() => handleCategoryClick("Hermo Home")}
           >
             Hermo Home
@@ -58,7 +65,9 @@ const NavBar = () => {
             </ul>
           </li>
           <li
-            className={`header__li ${activeCategoryRef.current === "Formula Floral" ? "active" : ""}`}
+            className={`header__li ${
+              activeCategoryRef.current === "Formula Floral" ? "active" : ""
+            }`}
             onClick={() => handleCategoryClick("Formula Floral")}
           >
             Formula Floral
@@ -67,7 +76,9 @@ const NavBar = () => {
             </ul>
           </li>
           <li
-            className={`header__li ${activeCategoryRef.current === "Aromaterapias" ? "active" : ""}`}
+            className={`header__li ${
+              activeCategoryRef.current === "Aromaterapias" ? "active" : ""
+            }`}
             onClick={() => handleCategoryClick("Aromaterapias")}
           >
             Aromaterapias
