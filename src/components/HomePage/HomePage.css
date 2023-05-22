@@ -1,0 +1,44 @@
+.container{
+    /* outline: 3px solid red; */
+    width: 1360px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner__figure{
+    width: 100%;
+}
+
+.banner__img{
+    width: 100%;
+}
+
+.home__info{
+    /* outline: 3px solid orange; */
+    display: flex;
+    margin-top: 55px;
+    height: 300px;
+}
+
+.home__description{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.home__figure{
+    
+    /* outline: 3px solid blue; */
+
+
+}
+
+.home__img{
+ 
+}
