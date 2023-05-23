@@ -1,17 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./NavBar.css";
 
 import LOGO from "../../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const NavBar = () => {
-  const activeCategoryRef = useRef("");
-
-  const handleCategoryClick = (category) => {
-    activeCategoryRef.current =
-      activeCategoryRef.current === category ? "" : category;
-  };
-
   return (
     <header className="header">
       <div className="header__container">
@@ -26,68 +19,72 @@ const NavBar = () => {
 
       <nav className="header__nav">
         <ul className="header__ul">
-          <li
-            className={`header__li ${
-              activeCategoryRef.current === "Herbo Pets" ? "active" : ""
-            }`}
-            onClick={() => handleCategoryClick("Herbo Pets")}
-          >
-            Herbo Pets
+          <li className="header__li">
+            <a href="#">Herbo Pets</a>
             <ul className="header__sub-ul">
-              <li className="header__sub-li">Formulas Florales</li>
-              <li className="header__sub-li">Brumas</li>
+              <li className="header__sub-li">
+                <a href="#">Formulas Florales</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Brumas</a>
+              </li>
             </ul>
           </li>
-          <li
-            className={`header__li ${
-              activeCategoryRef.current === "Sahumos" ? "active" : ""
-            }`}
-            onClick={() => handleCategoryClick("Sahumos")}
-          >
-            Sahumos
+          <li className="header__li">
+            <a href="#">Sahumos</a>
             <ul className="header__sub-ul">
-              <li className="header__sub-li">Sahumerios</li>
-              <li className="header__sub-li">Carbones de defumacion</li>
-              <li className="header__sub-li">Velas</li>
+              <li className="header__sub-li">
+                <a href="#">Sahumerios</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Carbones de defumacion</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Velas</a>
+              </li>
             </ul>
           </li>
-          <li
-            className={`header__li ${
-              activeCategoryRef.current === "Hermo Home" ? "active" : ""
-            }`}
-            onClick={() => handleCategoryClick("Hermo Home")}
-          >
-            Herbo Home
+          {/* Resto de las categorías */}
+          <li className="header__li">
+            <a href="#">Herbo Home</a>
             <ul className="header__sub-ul">
-              <li className="header__sub-li">Sales de baño</li>
-              <li className="header__sub-li">Difusores</li>
-              <li className="header__sub-li">Esencias para hornillos</li>
+              <li className="header__sub-li">
+                <a href="#">Sales de baño</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Difusores</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Esencias para hornillos</a>
+              </li>
             </ul>
           </li>
-          <li
-            className={`header__li ${
-              activeCategoryRef.current === "Formula Floral" ? "active" : ""
-            }`}
-            onClick={() => handleCategoryClick("Formula Floral")}
-          >
-            Formula Floral
+          <li className="header__li">
+            <a href="#">Formula Floral</a>
             <ul className="header__sub-ul">
-              <li className="header__sub-li">Tónicos herbales</li>
+              <li className="header__sub-li">
+                <a href="#">Tónicos herbales</a>
+              </li>
             </ul>
           </li>
-          <li
-            className={`header__li ${
-              activeCategoryRef.current === "Aromaterapias" ? "active" : ""
-            }`}
-            onClick={() => handleCategoryClick("Aromaterapias")}
-          >
-            Aromaterapias
+          <li className="header__li">
+            <a href="#">Aromaterapias</a>
             <ul className="header__sub-ul">
-              <li className="header__sub-li">Body Oils</li>
-              <li className="header__sub-li">Brumas Auricas</li>
-              <li className="header__sub-li">Roll On</li>
-              <li className="header__sub-li">Aceites esenciales</li>
-              <li className="header__sub-li">Unguento</li>
+              <li className="header__sub-li">
+                <a href="#">Body Oils</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Brumas Auricas</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Roll On</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Aceites esenciales</a>
+              </li>
+              <li className="header__sub-li">
+                <a href="#">Unguento</a>
+              </li>
             </ul>
           </li>
         </ul>
