@@ -3,6 +3,7 @@ import home__img from "../../assets/home__img.png";
 import { CarouselHomePage } from "../CarouselHomePage/CarouselHomePage";
 
 import "./HomePage.css";
+import { HelpInfo } from "../HelpInfo/HelpInfo";
 
 export const HomePage = () => {
   return (
@@ -24,6 +25,8 @@ export const HomePage = () => {
           <img src={home__img} alt="home" className="home__img" />
         </figure>
       </section>
+
+      <HelpInfo/>
     </main>
   );
 };

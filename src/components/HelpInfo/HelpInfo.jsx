@@ -1,6 +1,8 @@
 import './HelpInfo.css'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
+import WalletIcon from '@mui/icons-material/Wallet';
+import InventoryIcon from '@mui/icons-material/Inventory';
 
 
 export const HelpInfo = () => {
@@ -17,23 +19,23 @@ export const HelpInfo = () => {
             </article>
 
             <article className='footer__article'>
-                <p className="footer_subtitle">Agrega productos al carrito</p>
+                <p className="footer_subtitle">Nosotras te enviamos la cotización por mail</p>
                 <figure className="card__figure">
-                  <AddShoppingCartIcon className='card__img' style={{ fontSize: "100px" }} />
+                  <ForwardToInboxIcon className='card__img' style={{ fontSize: "100px" }} />
                 </figure>
             </article>
 
             <article className='footer__article'>
-                <p className="footer_subtitle">Agrega productos al carrito</p>
+                <p className="footer_subtitle">Hacés el pago y ponemos manos a la obra.</p>
                 <figure className="card__figure">
-                  <AddShoppingCartIcon className='card__img' style={{ fontSize: "100px" }} />
+                  <WalletIcon className='card__img' style={{ fontSize: "100px" }} />
                 </figure>
             </article>
 
             <article className='footer__article'>
-                <p className="footer_subtitle">Agrega productos al carrito</p>
+                <p className="footer_subtitle">Enviamos tu pedido y mucha info para que aprendas cómo vender en el mundo herbal.</p>
                 <figure className="card__figure">
-                  <AddShoppingCartIcon className='card__img' style={{ fontSize: "100px" }} />
+                  <InventoryIcon className='card__img' style={{ fontSize: "100px" }} />
                 </figure>
             </article>
 

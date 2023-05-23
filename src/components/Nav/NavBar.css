@@ -46,12 +46,15 @@
 .header__ul {
   display: flex;
   list-style: none;
+  
 }
 
 .header__li {
   margin: 0 40px;
   position: relative;
   cursor: pointer;
+  
+
 }
 
 .header__li.active {
@@ -92,7 +95,6 @@
 
 .header__sub-ul li {
   cursor: pointer;
-  text-align: center;
   font-size: 20px;
 }
 

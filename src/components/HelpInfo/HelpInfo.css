@@ -35,8 +35,7 @@
     flex-direction: column;
     /* outline: 3px solid blue; */
     width: 25%;
-    height: 95%;
-    margin: 20px 10px;
+    height: 100%;
     align-items: center;
 
 }
@@ -45,7 +44,7 @@
     display: flex;
     justify-content: center;
 /* outline: 3px solid green; */
-width: 90%;
+width: 100px;
 height: 100px;
 }
 
