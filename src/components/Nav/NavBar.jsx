@@ -57,7 +57,7 @@ const NavBar = () => {
             }`}
             onClick={() => handleCategoryClick("Hermo Home")}
           >
-            Hermo Home
+            Herbo Home
             <ul className="header__sub-ul">
               <li className="header__sub-li">Sales de baño</li>
               <li className="header__sub-li">Difusores</li>
