@@ -8,6 +8,7 @@ import './HomePage.css'
 export const HomePage = () => {
   return (
     <main className="container">
+      <br/>
           <CarouselHomePage/>
     <section className="home__info">
       <p className="home__description">

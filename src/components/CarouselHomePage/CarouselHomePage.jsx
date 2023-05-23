@@ -4,6 +4,7 @@ import banner1 from '../../assets/banner1.png'
 import banner2 from '../../assets/banner2.png'
 import banner3 from '../../assets/banner3.png'
 import banner4 from '../../assets/banner4.png'
+import './CarouselHomePage.css'
 export const CarouselHomePage = () => {
 
 
@@ -17,18 +18,18 @@ export const CarouselHomePage = () => {
     </div>
     <div className="carousel-item" data-bs-interval="5000">
     <figure className='banner__figure'>
-      <img src={banner2} className="d-block w-100 banner__img" alt="banner"/>
+      <img src={banner2} className="d-block w-100 banner__img" alt=""/>
     </figure>
     </div>
     <div className="carousel-item" data-bs-interval="5000">
     <figure className='banner__figure'>
-      <img src={banner3} className="d-block w-100 banner__img" alt="banner"/>
+      <img src={banner3} className="d-block w-100 banner__img" alt=""/>
     </figure>
     </div>
 
     <div className="carousel-item"data-bs-interval="5000">
     <figure className='banner__figure'>
-      <img src={banner4} className="d-block w-100 banner__img" alt="banner"/>
+      <img src={banner4} className="d-block w-100 banner__img" alt=""/>
     </figure>
     </div>
 
