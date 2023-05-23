@@ -1,14 +1,14 @@
 import React from 'react'
 import home__img from '../../assets/home__img.png'
-import banner1 from '../../assets/banner1.png'
+import { CarouselHomePage } from '../CarouselHomePage/CarouselHomePage'
+
 import './HomePage.css'
+
 
 export const HomePage = () => {
   return (
     <main className="container">
-      <figure className="banner__figure">
-        <img src={banner1} alt="home" className="banner__img" />
-      </figure>
+          <CarouselHomePage/>
     <section className="home__info">
       <p className="home__description">
         Hola! Queríamos compartir contigo que hace unos años, creamos Herbo

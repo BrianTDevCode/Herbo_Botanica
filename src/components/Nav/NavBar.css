@@ -52,6 +52,9 @@
   margin: 0 40px;
   position: relative;
   cursor: pointer;
+  outline: 3px solid red;
+  
+
 }
 
 .header__li.active {
@@ -70,13 +73,27 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 20px;
   z-index: 1;
+  width: 400px;
 }
 
-.header__li:hover .header__sub-ul,
-.header__li.active .header__sub-ul {
+/* .header__li:hover .header__sub-ul, 
+.header__li.active{
   display: block;
+} */
+
+
+
+.header__li:hover>.header__sub-ul  {        
+  display: block;
+
+}
+
+
+.header__sub-li:hover{
+  color: green;
 }
 
 .header__li:hover:not(.active) {
-  border-bottom: 2px solid green;
-}
+ border-bottom: 2px solid green;
+ 
+} 
