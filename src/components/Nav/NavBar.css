@@ -52,9 +52,6 @@
   margin: 0 40px;
   position: relative;
   cursor: pointer;
-  
-  
-
 }
 
 .header__li.active {
@@ -69,21 +66,18 @@
   transform: translateX(-50%);
   background-color: #fff;
   list-style: none;
-  
+
   font-size: 16px;
   z-index: 1;
   width: 100%;
   max-width: 100%;
   padding: 1px;
-  
 }
 
 .header__li:hover > .header__sub-ul {
   display: block;
-  pointer-events: auto; 
-  
+  pointer-events: auto;
 }
-
 
 .header__sub-li a:hover {
   color: green;
@@ -106,7 +100,6 @@
   color: inherit;
 }
 
-
 .header__ul,
 .header__sub-ul {
   padding: 0;
@@ -120,5 +113,4 @@
   list-style: none;
   text-decoration: none;
   color: inherit;
-  
 }
