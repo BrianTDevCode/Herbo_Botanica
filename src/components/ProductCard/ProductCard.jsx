@@ -3,8 +3,10 @@ import imgCard from "../../assets/pruebaCard.png";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
-export const ProductCard = () => {
+export const ProductCard = ({data}) => {
+ 
   return (
+    
     <div className="card__container">
       <section className="card__header">
         <figure className="card__figure--product">
@@ -17,7 +19,7 @@ export const ProductCard = () => {
       </section>
 
       <section className="card__footer">
-        <p className="card__title">Nombre del producto</p>
+        <p className="card__title">{data}</p>
         <figure className="card__figure--footer">
           <AddShoppingCartIcon className="card__img--footer" />
         </figure>
