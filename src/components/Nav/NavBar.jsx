@@ -1,11 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import LOGO from "../../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { ModalCart } from "../ModalCart/ModalCart";
 
 const NavBar = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   return (
     <header className="header">
       <div className="header__container">
@@ -15,7 +23,7 @@ const NavBar = () => {
         </figure>
         </Link>
         <div className="header__cart">
-          <ShoppingCartIcon className="header__cart-icon" />
+          <ShoppingCartIcon className="header__cart-icon" onClick = {handleShow}/>
         </div>
       </div>
 
@@ -91,6 +99,9 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
+
+    <ModalCart show={show} handleClose={handleClose}/>
+
     </header>
   );
 };
