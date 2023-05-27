@@ -1,13 +1,17 @@
+import { useState } from "react"
+
 import NavBar from "./components/Nav/NavBar"
 import { HomePage } from "./components/HomePage/HomePage"
 import {HelpInfo} from "./components/HelpInfo/HelpInfo"
-import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer"
+import {ProductListContainer} from "./components/ProductListContainer/ProductListContainer"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 
 
 
 const App = () => {
+
+  const [modalOpen,setModalOpen] = useState(false);
 
   return (
     
@@ -18,7 +22,7 @@ const App = () => {
     
         <Routes>
           <Route path='/' element={<HomePage/>}/>
-           <Route path='/category' element={<ItemListContainer />}/>
+           <Route path='/category' element={<ProductListContainer />}/>
 {/*            
           <Route path='/item/:id' element={<ItemDetailContainer />}/>
           <Route path='/cart' element={<Cart/>}/>

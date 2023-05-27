@@ -5,10 +5,15 @@ import { ProductCard } from '../ProductCard/ProductCard';
 
 
 
-export const ItemListContainer = () => {
+export const ProductListContainer = () => {
 
   const [products , setProducts] = useState([]);
-  const prueba = [1,2,3,4,5];
+  
+  //modal
+  const [modalOpen,setmodalOpen] = useState(false);
+
+
+
 
   useEffect(() => {
     const getProducts = async () => {
@@ -24,8 +29,6 @@ export const ItemListContainer = () => {
      
       
       setProducts(docs);
-
-      // setCounter( (c) => c + 1 )
 
     };
     
