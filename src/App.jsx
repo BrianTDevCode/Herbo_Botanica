@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import Footer from "./components/Footer/Footer"
 import NavBar from "./components/Nav/NavBar"
 import { HomePage } from "./components/HomePage/HomePage"
 import {HelpInfo} from "./components/HelpInfo/HelpInfo"
@@ -28,7 +28,7 @@ const App = () => {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/checkout' element={<Checkout/>}/>  */}
         </Routes>
-    
+          <Footer/>
         </BrowserRouter>
 
 

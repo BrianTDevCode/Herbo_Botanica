@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { db } from "../../firebase/firebaseConfig";
 import {collection,addDoc,query,where,getDocs, doc} from "firebase/firestore";
 import { ProductCard } from '../ProductCard/ProductCard';
+import './ProductListContainer.css'
 
 
 

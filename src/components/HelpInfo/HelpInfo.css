@@ -33,10 +33,11 @@
 .footer__article{
     display: flex;
     flex-direction: column;
-    /* outline: 3px solid blue; */
+    flex-wrap: wrap;
     width: 25%;
     height: 100%;
     align-items: center;
+    margin: 10px;
 
 }
 
@@ -52,12 +53,18 @@ height: 100px;
     
     margin-top: 30px;
     margin-bottom: 100px;
-    font-size: 20px;
+    font-size: 16px;
     color: #177f77;
-    font-weight: 500;
+    font-weight: bolder;
+    text-align: center;
+    
 }
 
 .card__img{
     color: #177f77;
     /* outline: 3px solid gray; */
+}
+
+.divIcons{
+    height: 200px;
 }
