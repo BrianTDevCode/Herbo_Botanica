@@ -1,4 +1,4 @@
-import { ModalHeader } from 'react-bootstrap';
+import { ModalFooter, ModalHeader } from 'react-bootstrap';
 import { ProductItemCart } from '../ProductItemCart/ProductItemCart';
 import './ModalCart.css'
 
@@ -12,7 +12,7 @@ export const ModalCart = ({ show, handleClose }) => {
       
       show={show}                
       onHide={handleClose}
-      dialogClassName="modal-cart"
+      dialogClassName="modal__cart"
       className='cart__container'
       
     >
@@ -26,10 +26,17 @@ export const ModalCart = ({ show, handleClose }) => {
         <ProductItemCart/>
         <ProductItemCart/>
         <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
+        
+     
       
       </Modal.Body>
+
+      
+        <div className="cart__btns">
+          <button className='cart__clear'>Vaciar carrito</button>
+          <button className='cart__continue'>Continuar compra</button>
+        </div>
+      
     </Modal>
     
   );

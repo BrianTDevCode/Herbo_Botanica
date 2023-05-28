@@ -15,14 +15,14 @@ const ModalProductDetail = ({ show, handleClose }) => {
         centered
         show={show}
         onHide={handleClose}
+        dialogClassName="modal__product-detail"
       >
-        <div className="modal__header">
-          <h3>titulo del producto</h3>
+        <div className="modal__product-header">
+          <h3 className="modal__product-title">titulo del producto</h3>
+          <CloseIcon onClick={handleClose} className="modal__product-close" />
         </div>
-        {/* <div className="modal__close">
-          <CloseIcon onClick={handleClose} />
-        </div> */}
-        <Modal.Body>
+       
+        <Modal.Body className="modal__product-body">
           <div className="body__description">
             <h3 className="body__title--description">Descripción</h3>
             <p className="body__description--text">
@@ -40,16 +40,16 @@ const ModalProductDetail = ({ show, handleClose }) => {
 
           <div className="body__use">
             <h3 className="body__title--use">Modo de uso</h3>
-            <p className="body__use--description">
+          
+
+<div className="body__use--description">
+  <p className="body__use--text">
               10 gotas por día en su pote de agua o 4 gotas, 4 veces al día por
               boca. Las esencias florales son 100% naturales. No generan
               adicción, ni tiene contraindicaciones.
             </p>
-
-<div className="btn__carrito">
-
-            <Button className="btn__input" variant="success">Agregar al carrito</Button>
 </div>
+            <button className="btn__carrito">Agregar al carrito</button>
 
           </div>
         </Modal.Body>

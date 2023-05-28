@@ -9,16 +9,9 @@
   align-items: center;
 }
 
-.modal__container {
-  width: 500px;
-  height: 500px;
-  background: #fff;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
 
-.modal__header {
+
+.modal__product-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,9 +24,10 @@
   height: 42px;
   width: 405px;
   border-radius: 9px;
+  /* outline: 3px solid red; */
 }
 
-h3 {
+.modal__product-title {
   text-align: center;
   font-weight: 500;
   font-size: 1rem;
@@ -41,11 +35,7 @@ h3 {
   margin-left: 20px;
 }
 
-.modal__close {
-  position: absolute;
-  top: -35px;
-  right: 390px;
-
+.modal__product-close {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -53,20 +43,18 @@ h3 {
   transition: 0.3 ease all;
   border-radius: 5px;
   color: #177f77;
+  margin-top: 5px;
+  margin-right: 3px;
 }
 
-.prueba {
-  height: 800px;
-  width: 1393px;
-}
 
-.modal-dialog {
+.modal__product-detail {
   max-width: 1400px;
   display: flex;
 
 }
 
-.modal-body {
+.modal__product-body {
   display: flex;
   /* outline: 3px solid red; */
 }
@@ -75,6 +63,7 @@ h3 {
   font-weight: 600;
   font-size: 32px;
   line-height: 38px;
+  
 }
 
 .body__description,.body__use {
@@ -90,6 +79,7 @@ h3 {
   font-size: 24px;
   line-height: 29px;
   text-align: center;
+  justify-content: center;
 }
 
 .body__figure {
@@ -105,20 +95,21 @@ h3 {
 }
 
 .body__use {
-  /* outline: 3px solid blue; */
-  width: 404px;
-  height: 697px;
+display: flex;
+flex-direction: column;
+/* outline: 3px solid green; */
+
+/* justify-content: center; */
 }
 
 .body__use--description{
-    display: block;
-    height: 90%;
+  /* outline: 2px solid red; */
+  
 }
 
 .btn__carrito{
-    /* outline: 2px solid orange; */
-    padding-bottom: 50px;
-
+    justify-self: flex-end;
+   
 }
 
 .btn__input{

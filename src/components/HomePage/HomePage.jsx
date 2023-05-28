@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
 import LOGO from "../../assets/logo.png";
 
 import Swal from "sweetalert2";
@@ -9,7 +8,7 @@ import { CarouselHomePage } from "../CarouselHomePage/CarouselHomePage";
 
 import "./HomePage.css";
 import { HelpInfo } from "../HelpInfo/HelpInfo";
-import { ModalMensaje } from "../ModalMensaje/ModalMensaje";
+
 
 export const HomePage = () => {
   const [show, setShow] = useState(false);
