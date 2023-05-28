@@ -32,18 +32,19 @@
 }
 
 .cart__header{
-    border-bottom:none !important ;
+ border-bottom:none !important ;
     
 font-style: normal;
 font-weight: 00;
 font-size: 20px;
-line-height: 24px;
-text-align: center;
+
 
 /* outline: 3px solid red; */
 
 display: flex;
 justify-content: center !important;
+align-items: center !important;
+width: 78%;
 }
 
 .cart__header > p{

@@ -14,7 +14,7 @@ export const ProductCard = ({data}) => {
   const handleShow = () => setShow(true);
 
  
-
+  
 
   return (
     <>

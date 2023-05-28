@@ -28,16 +28,7 @@ export const ModalCart = ({ show, handleClose }) => {
         <ProductItemCart/>
         <ProductItemCart/>
         <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
-        <ProductItemCart/>
+      
       </Modal.Body>
     </Modal>
     

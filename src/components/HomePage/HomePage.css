@@ -27,4 +27,13 @@
   
 }
 
-
+.swal2-confirm{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+width: 227px !important;
+height: 36px !important;
+background: #177F77 !important;
+border-radius: 50px !important;
+border: none !important;
+  }
