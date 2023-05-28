@@ -7,6 +7,9 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 export const ProductItemCart = () => {
   return (
+    <>
+    
+    
     <section className="item__container">
       <figure className="item__figure">
         <img src={imgCard} alt="" className="item__img" />
@@ -24,5 +27,8 @@ export const ProductItemCart = () => {
         <DeleteOutlineIcon style={{fontSize: "40px"}}/>
       </div>
     </section>
+    <div className="hr"></div>
+    
+    </>
   );
 };

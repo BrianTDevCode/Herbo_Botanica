@@ -11,7 +11,6 @@ const ModalProductDetail = ({ show, handleClose }) => {
   return (
     <>
       <Modal
-        className="modal-ancho"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         show={show}
@@ -23,7 +22,7 @@ const ModalProductDetail = ({ show, handleClose }) => {
         {/* <div className="modal__close">
           <CloseIcon onClick={handleClose} />
         </div> */}
-        <Modal.Body className="prueba">
+        <Modal.Body>
           <div className="body__description">
             <h3 className="body__title--description">Descripción</h3>
             <p className="body__description--text">

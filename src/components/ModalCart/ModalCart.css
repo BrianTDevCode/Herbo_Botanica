@@ -1,28 +1,51 @@
 
 
-.modal-dialog {
-    display: flex;
-    justify-content: end;
-    height: 100%;
+
+
+ .cart__container{
+     /* min-height: 80%; */
+     max-width: 60%;
+   max-height: 80%;
+    left: 38% !important;
+    top: -3% !important;
     
-    /* outline: 3px solid green; */
-    height: 100%;
+    
+    
  }
 
- .modal-content{
-    min-height: 80%;
-    max-height: 80%;
-    max-width: 50%;
-    position: fixed;
-    top: -10%;
- }
 
-.modal-body{
-    outline: 3px solid red;
+
+.cart__body{
+    /* outline: 3px solid red; */
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: scroll;
     
 
+}
+
+.modal-cart{
+    position: fixed; 
+    right: -200px;
+  
+}
+
+.cart__header{
+    border-bottom:none !important ;
+    
+font-style: normal;
+font-weight: 00;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+/* outline: 3px solid red; */
+
+display: flex;
+justify-content: center !important;
+}
+
+.cart__header > p{
+    margin-top: 30px;
 }
