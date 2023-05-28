@@ -2,4 +2,29 @@
     width: 100%;
     height: 300px;
     background-color: #177F77;
+    color:white
+}
+.sectionConteiner{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    justify-content: space-around;
+}
+.divConteiner{
+    margin-top: 10px;
+}
+.divConteiner h2{
+    font-size: 20px;
+}
+ul li{
+    margin-top: 25px;
+    list-style: none;
+}
+.ulConteiner{
+    margin-top: 5px;
+    list-style: none;
+    
+}
+.h2Title{
+    text-align: center;
 }
