@@ -1,4 +1,6 @@
+import React from "react";
 import "./Footer.css";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -6,26 +8,35 @@ const Footer = () => {
       <section className="sectionConteiner">
         <div className="divConteiner">
           <ul>
-            <li>Instagram</li>
-            <li>Facebook</li>
+            <li>
+              <FaInstagram className="icon" /> Instagram
+            </li>
+            <li>
+              <FaFacebook className="icon" /> Facebook
+            </li>
           </ul>
         </div>
         <div className="divConteiner">
           <h2>Categorias</h2>
-
-          <li className="ulConteiner">Inicio</li>
-          <li className="ulConteiner">Sahumos</li>
-          <li className="ulConteiner">Herbo pets</li>
-          <li className="ulConteiner">Herbo home</li>
-          <li className="ulConteiner">Formulas floreales</li>
-          <li className="ulConteiner">Aromaterapia</li>
+          
+            <li className="ulConteiner">Inicio</li>
+            <li className="ulConteiner">Sahumos</li>
+            <li className="ulConteiner">Herbo pets</li>
+            <li className="ulConteiner">Herbo home</li>
+            <li className="ulConteiner">Formulas floreales</li>
+            <li className="ulConteiner">Aromaterapia</li>
+          
         </div>
         <div className="divConteiner">
           <h2 className="h2Title">Contactanos</h2>
-          <li className="ulConteiner">541173633708</li>
-          <li className="ulConteiner">+54 911 73633708</li>
-          <li className="ulConteiner">hola@herbobotanica.com</li>
-          <li className="ulConteiner">Blanco Encalada 5034 Local 21, paseo de Homs Urquiza </li>
+          <ul>
+            <li className="ulConteiner">541173633708</li>
+            <li className="ulConteiner">+54 911 73633708</li>
+            <li className="ulConteiner">hola@herbobotanica.com</li>
+            <li className="ulConteiner">
+              Blanco Encalada 5034 Local 21, paseo de Homs Urquiza
+            </li>
+          </ul>
         </div>
       </section>
       <article>
