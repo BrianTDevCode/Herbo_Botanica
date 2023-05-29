@@ -1,7 +1,9 @@
+
+
 .checkout__container{
-    outline: 3px solid red;
+    /* outline: 3px solid red; */
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +11,7 @@
 
 
 .checkout__header{
-    border: 3px solid green;
+    /* border: 3px solid green; */
     width: 50%;
     height: 100px;
     background-color: #177F77;
@@ -19,7 +21,7 @@
     justify-content: space-around;
     align-items: center;
 }
-
+ 
 .checkout__figure{
     width: 150px;
     height:70%;
@@ -33,56 +35,103 @@
     height: 100%;
 }
 
+
+
+
 .checkout__frm{
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     /* outline: 3px solid blue; */
     width: 50%;
-    height: 60%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    /* overflow-y: scroll; */
 }
 
-.frm__input{
+ .frm__label{
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 15px;
+    /* outline: 3px solid blue;  */
+
+} 
+
+ .frm__input{
     width: 95%;
-    height: 70px;
-    border: 3px solid #000;
+    height: 50px;
+    border: 2px solid #000;
     margin-bottom: 25px;
 }
 
+
+
+
 .frm__radio{
     width: 95%;
-    /* outline: 3px solid red; */
+    /* outline: 3px solid red;  */
 }
 
 .frm__opcion{
-    
     display: flex;
     width: 100%;
-    border: 3px solid #000;
-    height: 70px;
+    border: 2px solid #000;
+    height: 50px;
 
-    /* outline: 3px solid red; */
+     /* outline: 3px solid red;  */
 
 }
 
 .frm__opcion input{
-    outline: 3px solid red;
-    width: 10%;
+    /* outline: 3px solid red; */
+    margin-left: 5px;
+    width: 5%;
     margin-right: 20px;
 
 }
 
 .frm__opcion label{
-    /* outline: 3px solid green; */
+     /* outline: 3px solid green;  */
     display: flex;
     align-items: center;
+    letter-spacing: 2px;
 }
 
 .frm__icon{
     display: flex;
     width: 100%;
-    outline: 3px solid green;
-    font-size: 50px;
+    /* outline: 3px solid green; */
+    margin-right: 25px;
+
+}  
+
+.frm__group{
+    width: 95%;
+    /* outline: 3px solid green; */
 
 }
+
+.frm__group .frm__input{
+    width: 48%;
+    max-height: 50px;
+}
+
+.frm__group .frm__input:last-child{
+    margin-left: 18px;
+}
+
+.frm__btn {
+    width: 216px;
+    height: 36px;
+    background: #177f77;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
