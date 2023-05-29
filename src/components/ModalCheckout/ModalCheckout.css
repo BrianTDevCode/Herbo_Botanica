@@ -1,0 +1,88 @@
+.checkout__container{
+    outline: 3px solid red;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.checkout__header{
+    border: 3px solid green;
+    width: 50%;
+    height: 100px;
+    background-color: #177F77;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.checkout__figure{
+    width: 150px;
+    height:70%;
+    /* outline: 3px solid blue; */
+    margin-top: 15px;
+    
+}
+
+.checkout__img{
+    width: 100%;
+    height: 100%;
+}
+
+.checkout__frm{
+    /* outline: 3px solid blue; */
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.frm__input{
+    width: 95%;
+    height: 70px;
+    border: 3px solid #000;
+    margin-bottom: 25px;
+}
+
+.frm__radio{
+    width: 95%;
+    /* outline: 3px solid red; */
+}
+
+.frm__opcion{
+    
+    display: flex;
+    width: 100%;
+    border: 3px solid #000;
+    height: 70px;
+
+    /* outline: 3px solid red; */
+
+}
+
+.frm__opcion input{
+    outline: 3px solid red;
+    width: 10%;
+    margin-right: 20px;
+
+}
+
+.frm__opcion label{
+    /* outline: 3px solid green; */
+    display: flex;
+    align-items: center;
+}
+
+.frm__icon{
+    display: flex;
+    width: 100%;
+    outline: 3px solid green;
+    font-size: 50px;
+
+}

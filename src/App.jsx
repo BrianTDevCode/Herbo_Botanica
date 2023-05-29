@@ -5,6 +5,7 @@ import { HomePage } from "./components/HomePage/HomePage"
 import {HelpInfo} from "./components/HelpInfo/HelpInfo"
 import {ProductListContainer} from "./components/ProductListContainer/ProductListContainer"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { ModalCheckout } from "./components/ModalCheckout/ModalCheckout"
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
            <Route path='/category' element={<ProductListContainer />}/>
+           <Route path='/checkout' element={<ModalCheckout/>}/>
 {/*            
           <Route path='/item/:id' element={<ItemDetailContainer />}/>
           <Route path='/cart' element={<Cart/>}/>

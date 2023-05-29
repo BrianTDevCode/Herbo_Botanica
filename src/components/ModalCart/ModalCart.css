@@ -6,7 +6,7 @@
   height: 70% !important;
   padding: 0 !important;
   --bs-modal-width: 100% !important;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 
 .cart__header {
@@ -50,6 +50,10 @@
   color: #fff;
   border: none;
   margin-left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .cart__clear {
