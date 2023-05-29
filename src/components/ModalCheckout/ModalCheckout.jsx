@@ -1,8 +1,8 @@
-import './ModalCheckout.css';
+import "./ModalCheckout.css";
 import logo from "../../assets/Logo_blanco.png";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
 export const ModalCheckout = () => {
   return (
@@ -15,18 +15,18 @@ export const ModalCheckout = () => {
       </div>
       <Formik
         initialValues={{
-          email: '',
-          deliveryMethod: 'envio',
-          country: '',
-          firstName: '',
-          lastName: '',
-          address: '',
-          apartment: '',
-          postalCode: '',
-          city: '',
-          phone: '',
+          email: "",
+          deliveryMethod: "envio",
+          country: "",
+          firstName: "",
+          lastName: "",
+          address: "",
+          apartment: "",
+          postalCode: "",
+          city: "",
+          phone: "",
         }}
-        onSubmit={values => {
+        onSubmit={(values) => {
           console.log(values);
         }}
       >
@@ -46,7 +46,7 @@ export const ModalCheckout = () => {
                 name="deliveryMethod"
                 value="envio"
               />
-              <ShoppingCartIcon className="frm__icon" />
+              <ShoppingCartIcon style={{ height: '2em' }} className="frm__icon" />
               <label htmlFor="envio">Envío</label>
             </div>
             <div className="frm__opcion">
@@ -56,7 +56,7 @@ export const ModalCheckout = () => {
                 name="deliveryMethod"
                 value="retiro"
               />
-              <LocalShippingIcon className="frm__icon" />
+              <LocalShippingIcon style={{ height: '2em' }} className="frm__icon" />
               <label htmlFor="retiro">Retiro</label>
             </div>
           </div>
