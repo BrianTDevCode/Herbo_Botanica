@@ -19,12 +19,12 @@ export const ProductItemCart = () => {
       </div>
 
       <div className="item__quantity">
-        <RemoveIcon style={{fontSize: "40px"}} className="item__quantity--minus"/>
+        <RemoveIcon style={{fontSize: "25px"}} className="item__quantity--minus"/>
         <p className="item__quantity--text">1</p>
-        <AddIcon style={{fontSize: "40px"}} className="item__quantity--plus"/>
+        <AddIcon style={{fontSize: "25px"}} className="item__quantity--plus"/>
       </div>
       <div className="item__delete">
-        <DeleteOutlineIcon style={{fontSize: "40px"}}/>
+        <DeleteOutlineIcon style={{fontSize: "30px"}}/>
       </div>
     </section>
     <div className="hr"></div>

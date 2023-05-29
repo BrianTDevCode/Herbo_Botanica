@@ -7,21 +7,21 @@
   padding: 0 !important;
   --bs-modal-width: 100% !important;
   /* border: 3px solid red; */
+  
 }
-
+.item__quantity svg{
+  font-size: 25px;
+}
 .cart__header {
   display: flex;
   justify-content: center !important;
-  border-bottom:none !important;
-
+  border-bottom: none !important;
   /* outline: 3px solid red; */
 }
 
 .cart__header > p {
   margin-top: 15px;
 }
-
-
 
 .modal__cart {
   margin: 0 !important;
@@ -32,6 +32,7 @@
   /* outline: 3px solid red; */
   display: flex;
   flex-direction: column;
+  
 }
 
 .cart__btns {
@@ -64,3 +65,4 @@
   border-radius: 50px;
   color: #177f77;
 }
+
