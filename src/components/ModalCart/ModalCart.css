@@ -1,8 +1,13 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 .cart__container {
   right: 20% !important;
-  left: 45% !important;
-  min-width: 720px !important;
-  width: 50% !important;
+  left: 56% !important;
+  top: 15% !important;
+  /* min-width: 720px !important; */
+  width: 44% !important;
   height: 70% !important;
   padding: 0 !important;
   --bs-modal-width: 100% !important;
