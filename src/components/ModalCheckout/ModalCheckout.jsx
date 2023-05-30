@@ -104,7 +104,7 @@ export const ModalCheckout = () => {
           <div className="frm__group">
             <Field
               className="frm__input"
-              type="text"
+              type="number"
               name="postalCode"
               placeholder="Código postal"
             />
@@ -117,7 +117,7 @@ export const ModalCheckout = () => {
           </div>
           <Field
             className="frm__input"
-            type="text"
+            type="number"
             name="phone"
             placeholder="Teléfono"
           />
