@@ -17,6 +17,23 @@
   align-content: space-between;
   justify-content: space-around;
 }
+.divOut{
+  width: 38vh;
+}
+.header__cart-indicator {
+  position: absolute;
+  top: 57px;
+  right: 160px;
+  width: 12px;
+  height: 12px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  cursor:pointer;
+}
+.header__cart-icon:hover {
+  cursor: pointer;
+}
+
 
 .header__figure {
   width: 272px;
@@ -29,6 +46,7 @@
 }
 
 .header__cart {
+  display: flex;
   height: 80px;
   width: 30px;
   align-items: flex-end;

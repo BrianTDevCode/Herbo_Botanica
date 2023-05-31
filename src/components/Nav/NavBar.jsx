@@ -7,11 +7,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ModalCart } from "../ModalCart/ModalCart";
 import { CartContext } from "../../context/CartContext";
 
-
-
-
 const NavBar = () => {
-  const {items} = useContext(CartContext);
+  const { items } = useContext(CartContext);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -20,21 +17,23 @@ const NavBar = () => {
   return (
     <header className="header">
       <div className="header__container">
+        <div className="divOut"></div>
         <Link className="header__link" to={`/`}>
           <figure className="header__figure">
             <img className="header__img" src={LOGO} alt="logo" />
           </figure>
         </Link>
 
-        <div className='productCount__container'>
-      <p>{items.length}</p>
-    </div>
+        <div className="productCount__container">
+          {items.length > 0 && <div className="productCount__indicator" />}
+        </div>
 
         <div className="header__cart">
           <ShoppingCartIcon
             className="header__cart-icon"
             onClick={handleShow}
           />
+          {items.length > 0 && <div className="header__cart-indicator" />}
         </div>
       </div>
 
@@ -84,7 +83,6 @@ const NavBar = () => {
               </li>
             </ul>
           </li>
-          {/* Resto de las categorías */}
           <li className="header__li">
             <Link className="header__link" to={`/category`}>
               Herbo Home
