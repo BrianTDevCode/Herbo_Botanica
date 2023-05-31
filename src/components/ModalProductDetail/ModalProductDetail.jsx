@@ -8,6 +8,8 @@ import Button from 'react-bootstrap/Button';
 import "./ModalProductDetail.css";
 import { CartContext } from "../../context/CartContext";
 
+import { ToastContainer } from "react-toastify";
+
 const ModalProductDetail = ({ data, show, handleClose }) => {
 
 
@@ -23,7 +25,7 @@ const ModalProductDetail = ({ data, show, handleClose }) => {
         dialogClassName="modal__product-detail"
       >
         <div className="modal__product-header">
-          <h3 className="modal__product-title">titulo del producto</h3>
+          <h3 className="modal__product-title">{data.nombre}</h3>
           <CloseIcon onClick={handleClose} className="modal__product-close" />
         </div>
        
@@ -32,7 +34,7 @@ const ModalProductDetail = ({ data, show, handleClose }) => {
             <h3 className="body__title--description">Descripción</h3>
             <p className="body__description--text">
               Para animales reactivos, con problemas de comportamiento. Se
-              muestran agresivos dentro de la manada y con los humanxs. Esta
+              muestran agresivos dentro z la manada y con los humanxs. Esta
               fórmula trabaja la agresividad, la actitud desafiante, la reacción
               fuera de control y aporta paz y calma y los ayuda a recuperar el
               equilibrio emocional y el control de sus impulsos.
@@ -58,6 +60,7 @@ const ModalProductDetail = ({ data, show, handleClose }) => {
 
           </div>
         </Modal.Body>
+
       </Modal>
     </>
   );

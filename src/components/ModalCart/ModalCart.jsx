@@ -11,7 +11,7 @@ import { CartContext } from "../../context/CartContext";
 
 export const ModalCart = ({ show, handleClose }) => {
 
-  const {items } = useContext(CartContext);
+  const {items, cleanCart } = useContext(CartContext);
 
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
@@ -40,7 +40,7 @@ export const ModalCart = ({ show, handleClose }) => {
       </Modal.Body>
 
       <div className="cart__btns">
-        <button className="cart__clear">Vaciar carrito</button>
+        <button className="cart__clear" onClick={() => cleanCart()}>Vaciar carrito</button>
         <Link className="cart__continue" to={'/checkout'} onClick={handleClose} >Continuar compra</Link>
       </div>
     </Modal>
