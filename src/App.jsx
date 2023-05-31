@@ -2,10 +2,10 @@ import { useState } from "react"
 import Footer from "./components/Footer/Footer"
 import NavBar from "./components/Nav/NavBar"
 import { HomePage } from "./components/HomePage/HomePage"
-import {HelpInfo} from "./components/HelpInfo/HelpInfo"
 import {ProductListContainer} from "./components/ProductListContainer/ProductListContainer"
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import { ModalCheckout } from "./components/ModalCheckout/ModalCheckout"
+import { CartProvider } from "./context/CartContext"
 
 
 
@@ -17,7 +17,7 @@ const App = () => {
   return (
     
     
-
+<CartProvider>
 <BrowserRouter>
         <NavBar/>
     
@@ -32,6 +32,7 @@ const App = () => {
         </Routes>
           <Footer/>
         </BrowserRouter>
+        </CartProvider>
 
 
    

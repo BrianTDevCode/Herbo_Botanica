@@ -1,12 +1,17 @@
 import "./NavBar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import LOGO from "../../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ModalCart } from "../ModalCart/ModalCart";
+import { CartContext } from "../../context/CartContext";
+
+
+
 
 const NavBar = () => {
+  const {items} = useContext(CartContext);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -20,6 +25,11 @@ const NavBar = () => {
             <img className="header__img" src={LOGO} alt="logo" />
           </figure>
         </Link>
+
+        <div className='productCount__container'>
+      <p>{items.length}</p>
+    </div>
+
         <div className="header__cart">
           <ShoppingCartIcon
             className="header__cart-icon"

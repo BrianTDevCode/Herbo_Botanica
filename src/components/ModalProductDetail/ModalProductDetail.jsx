@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -6,8 +6,13 @@ import imgCard from "../../assets/pruebaCard.png";
 import Button from 'react-bootstrap/Button';
 
 import "./ModalProductDetail.css";
+import { CartContext } from "../../context/CartContext";
 
-const ModalProductDetail = ({ show, handleClose }) => {
+const ModalProductDetail = ({ data, show, handleClose }) => {
+
+
+  const {addItem } = useContext(CartContext);
+
   return (
     <>
       <Modal
@@ -49,7 +54,7 @@ const ModalProductDetail = ({ show, handleClose }) => {
               adicción, ni tiene contraindicaciones.
             </p>
 </div>
-            <button className="btn__carrito">Agregar al carrito</button>
+            <button className="btn__carrito" onClick={() => addItem(data)}>Agregar al carrito</button>
 
           </div>
         </Modal.Body>

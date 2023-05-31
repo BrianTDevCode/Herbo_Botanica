@@ -116,3 +116,15 @@
   text-decoration: none;
   color: inherit;
 }
+
+.productCount__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  bottom:50px;
+  left: 28px;
+  border-radius: 50px;
+  
+  }

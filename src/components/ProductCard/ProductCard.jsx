@@ -29,13 +29,13 @@ export const ProductCard = ({data}) => {
       </section>
 
       <section className="card__footer">
-        <p className="card__title">{data}</p>
+        <p className="card__title">{data.nombre}</p>
         <figure className="card__figure--footer">
           <AddShoppingCartIcon className="card__img--footer" />
         </figure>
       </section>
     </div>
-    <ModalProductDetail show={show} handleClose={handleClose}/>
+    <ModalProductDetail data={data} show={show} handleClose={handleClose}/>
     </>
     
   );

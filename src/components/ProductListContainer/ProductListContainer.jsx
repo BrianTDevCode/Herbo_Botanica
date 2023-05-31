@@ -44,7 +44,7 @@ export const ProductListContainer = () => {
         
         products.map((prod)=>{
           return (
-            <ProductCard key={prod.nombre} data ={prod.nombre}/>
+            <ProductCard key={prod.id} data ={prod}/>
           );
           
         })
