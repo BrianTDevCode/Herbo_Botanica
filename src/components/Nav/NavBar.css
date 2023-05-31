@@ -18,12 +18,15 @@
   justify-content: space-around;
 }
 .divOut{
-  width: 38vh;
+  width: 25vh;
+}
+.header__cart{
+  position: relative;
 }
 .header__cart-indicator {
   position: absolute;
-  top: 57px;
-  right: 160px;
+  top: 17px;
+  right: 5px;
   width: 12px;
   height: 12px;
   background-color: #ff0000;
