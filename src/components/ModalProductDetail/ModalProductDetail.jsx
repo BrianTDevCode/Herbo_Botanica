@@ -29,7 +29,10 @@ const ModalProductDetail = ({ data, show, handleClose }) => {
       >
         <div className="modal__product-header">
           <h3 className="modal__product-title">{data.nombre}</h3>
-          <CloseIcon onClick={handleClose} className="modal__product-close" />
+          <figure className="header__figure-ProductDetail">
+          <CloseIcon onClick={handleClose} className="header__img-ProductDetail" />
+
+          </figure>
         </div>
 
         <Modal.Body className="modal__product-body">

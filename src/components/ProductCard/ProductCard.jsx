@@ -1,9 +1,10 @@
 import "./ProductCard.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import imgCard from "../../assets/pruebaCard.png";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import  ModalProductDetail  from "../ModalProductDetail/ModalProductDetail";
+import { CartContext } from "../../context/CartContext";
 
 export const ProductCard = ({data}) => {
  
@@ -12,7 +13,13 @@ export const ProductCard = ({data}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
- 
+  const { addItem } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    addItem(data);
+    toast.success(`${data.nombre} se ha agregado al carrito`);
+    handleShow;
+  };
   
 
   return (
@@ -31,7 +38,7 @@ export const ProductCard = ({data}) => {
       <section className="card__footer">
         <p className="card__title">{data.nombre}</p>
         <figure className="card__figure--footer">
-          <AddShoppingCartIcon className="card__img--footer" />
+          <AddShoppingCartIcon className="card__img--footer"  onClick={handleAddToCart} />
         </figure>
       </section>
     </div>
