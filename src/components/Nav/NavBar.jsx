@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <div className="divOut"></div>
+        {/* <div className="divOut"></div> */}
         <Link className="header__link" to={`/`}>
           <figure className="header__figure">
             <img className="header__img" src={LOGO} alt="logo" />

@@ -67,6 +67,8 @@ padding: 8px;
 
 .header__img-ProductDetail{
   margin-right: 5px;
+ cursor: pointer;
+
 }
 
 .modal__product-close {
@@ -81,7 +83,6 @@ padding: 8px;
   margin-right: 3px;
   position: relative;
   left: 10%;
- 
 
 }
 

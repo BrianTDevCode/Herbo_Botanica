@@ -14,8 +14,7 @@
   display: flex;
   align-items: baseline;
   flex-direction: row;
-  align-content: space-between;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .divOut{
   width: 25vh;

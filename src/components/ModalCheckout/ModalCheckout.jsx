@@ -4,7 +4,80 @@ import { Formik, Form, Field } from "formik";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
+import Swal from "sweetalert2";
+
+import { db } from "../../firebase/firebaseConfig";
+import {
+  collection,
+  addDoc,
+  doc,
+  writeBatch,
+  FieldValue,
+  Firestore,
+  increment,
+  updateDoc,
+} from "firebase/firestore";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+
 export const ModalCheckout = () => {
+  const {setItems,items} = useContext(CartContext);
+
+
+  const OnSubmit = (values) => {
+  let data = [];
+    data.cart = [];
+    data.user = values;
+
+    const today = new Date();
+    const now = today.toLocaleString();
+
+
+    data.user.purchaseDate = now;
+ 
+
+    items.map((item) => {
+       let obj = {
+        id: item.id,
+        nombre:item.nombre,
+        categoria: item.categoria,
+        tipo: item.producto,
+        
+      };
+      data.cart.push(obj);
+    });
+    
+    console.log(data.cart);
+    
+    Swal.fire({
+      title: "Confirmar compra",
+      text: "Desea confirmar la compra?",
+      icon: "question",
+      confirmButtonText: "si",
+      confirmButtonColor: "#2b52e0",
+      showDenyButton: true,
+      denyButtonText: "no",
+    }).then((resp) => {
+      if (resp.isConfirmed) {
+        const add = async () => {
+          const docRef = await addDoc(collection(db, "pedidos"), {
+            user: data.user,
+            cart: data.cart,
+          });
+          console.log("Document written with ID: ", docRef.id);
+           setPurchaseID(docRef.id);
+        };
+        add();
+
+      
+         data = [];
+          setItems(data);
+      }
+    });
+  };
+
+
+
   return (
     <section className="container checkout__container">
       <div className="checkout__header">
@@ -26,9 +99,9 @@ export const ModalCheckout = () => {
           city: "",
           phone: "",
         }}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
+        onSubmit={OnSubmit}
+       
+        
         validate={(values) => {
           const errors = {};
 

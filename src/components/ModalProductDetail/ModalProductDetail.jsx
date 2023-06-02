@@ -60,14 +60,14 @@ const ModalProductDetail = ({ data, show, handleClose }) => {
                 adicción ni tienen contraindicaciones.
               </p>
             </div>
-            <button className="btn__carrito" onClick={handleAddToCart}>
+            {/* <button className="btn__carrito" onClick={handleAddToCart}>
               Agregar al carrito
-            </button>
+            </button> */}
           </div>
         </Modal.Body>
       </Modal>
 
-      <ToastContainer /> 
+   
     </>
   );
 };

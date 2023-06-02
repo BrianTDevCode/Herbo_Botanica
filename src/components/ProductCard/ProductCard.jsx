@@ -5,6 +5,8 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import  ModalProductDetail  from "../ModalProductDetail/ModalProductDetail";
 import { CartContext } from "../../context/CartContext";
+import { ToastContainer, toast } from "react-toastify";
+
 
 export const ProductCard = ({data}) => {
  
@@ -17,7 +19,6 @@ export const ProductCard = ({data}) => {
 
   const handleAddToCart = () => {
     addItem(data);
-    toast.success(`${data.nombre} se ha agregado al carrito`);
     handleShow;
   };
   
@@ -43,6 +44,7 @@ export const ProductCard = ({data}) => {
       </section>
     </div>
     <ModalProductDetail data={data} show={show} handleClose={handleClose}/>
+    <ToastContainer /> 
     </>
     
   );
