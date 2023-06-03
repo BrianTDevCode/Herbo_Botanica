@@ -194,8 +194,9 @@ export const ModalCheckout = () => {
             <Field
               className="frm__input"
               type="text"
-              name="apartment"
+              name="number"
               placeholder="  Número"
+              required
             />
           </div>
 

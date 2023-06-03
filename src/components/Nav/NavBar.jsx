@@ -84,12 +84,12 @@ const NavBar = () => {
             </ul>
           </li>
           <li className="header__li">
-            <Link className="header__link" to={`/category`}>
+            <Link className="header__link" to={`/listaproductos/Herbo_Home`}>
               Herbo Home
             </Link>
             <ul className="header__sub-ul">
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`/categoria/tipo/Sales_de_Baño`}>
                   Sales de baño
                 </Link>
               </li>
@@ -99,7 +99,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`/listaproductos/Herbo_Home/Esencia_para_hornillo`}>
                   Esencias para hornillos
                 </Link>
               </li>
