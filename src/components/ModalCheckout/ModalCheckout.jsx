@@ -60,6 +60,23 @@ export const ModalCheckout = () => {
         console.log("Document written with ID: ", docRef.id);
 
         setItems([]);
+
+        Swal.fire({
+          html: `<div >
+            <img src="${logo}" alt="Logo" style="width: 100px; height: auto; position: absolute; top: 10px; left: 10px;" />
+            <p style="margin-top: 75px;">
+            ¡Genial! Hemos recibido tu formulario y registro con éxito. Pronto nos pondremos en contacto contigo para continuar con tu compra. 
+            ¡Muchas gracias!
+            </p>
+          </div>`,
+          showConfirmButton: false,
+          confirmButtonColor: "#28a745",
+          confirmButtonText: "Entendido",
+          showCancelButton: false,
+          background: "rgb(159, 180, 179)",
+          background: "linear-gradient(177deg, rgba(159, 180, 179, 1) 0%, rgba(255, 255, 255, 1) 100%)",
+          showCloseButton: true,
+        });
       }
     } catch (error) {
       console.error("Error al confirmar la compra:", error);

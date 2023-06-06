@@ -9,11 +9,31 @@
 
 
 .home__info{
-    /* outline: 3px solid orange; */
     display: flex;
     margin-top: 55px;
     height: 300px;
+    width: 100%;
+    margin-bottom: 150px;
+    flex-direction: column;
+    /* border: 3px solid orange; */
+   
 }
+
+.home__figure{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    bottom: 40%;
+    left: 35%;
+    /* outline: 3px solid red; */
+}
+
+.home__svg{
+    width: 100%;
+    opacity: 0.35;
+    z-index: 0;
+
+} 
 
 .home__description{
     font-family: 'Montserrat';
@@ -22,9 +42,14 @@
     font-size: 22px;
     line-height: 28px;
     text-align: center;
-    width: 80%;
+   
     margin-top: 10px;
-  
+    /* outline: 3px solid red; */
+
+    /* width: 100%; */
+    z-index: 1;
+
+ 
 }
 
 .swal2-confirm{
