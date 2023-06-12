@@ -28,7 +28,7 @@ export const ProductCard = ({data}) => {
     <div className="card__container">
       <section className="card__header">
         <figure className="card__figure--product">
-          <img className="card__img--product" src={imgCard} />
+          <img className="card__img--product" src={data.cover} />
         </figure>
 
         <figure className="card__figure--info">

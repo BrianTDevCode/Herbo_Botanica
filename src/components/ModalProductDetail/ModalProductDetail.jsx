@@ -38,17 +38,11 @@ const ModalProductDetail = ({ data, show, handleClose }) => {
         <Modal.Body className="modal__product-body">
           <div className="body__description">
             <h3 className="body__title--description">Descripción</h3>
-            <p className="body__description--text">
-              Para animales reactivos, con problemas de comportamiento. Se
-              muestran agresivos dentro de la manada y con los humanos. Esta
-              fórmula trabaja la agresividad, la actitud desafiante, la reacción
-              fuera de control y aporta paz y calma y los ayuda a recuperar el
-              equilibrio emocional y el control de sus impulsos.
-            </p>
+            <p className="body__description--text">{data.descripcion}</p>
           </div>
 
           <figure className="body__figure">
-            <img className="body__img" src={imgCard} alt="product-image" />
+            <img className="body__img" src={data.cover} alt="product-image" />
           </figure>
 
           <div className="body__use">

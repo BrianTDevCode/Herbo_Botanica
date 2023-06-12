@@ -10,7 +10,7 @@
 
 .header__container {
   width: 100%;
-  height: 210px;
+  height: 160px;
   display: flex;
   align-items: baseline;
   flex-direction: row;
@@ -60,7 +60,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 10px;
 }
 
 .header__ul {

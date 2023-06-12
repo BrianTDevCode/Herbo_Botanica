@@ -24,9 +24,9 @@ const NavBar = () => {
           </figure>
         </Link>
 
-        <div className="productCount__container">
+        {/* <div className="productCount__container">
           {items.length > 0 && <div className="productCount__indicator" />}
-        </div>
+        </div> */}
 
         <div className="header__cart">
           <ShoppingCartIcon
@@ -62,10 +62,10 @@ const NavBar = () => {
             </ul>
           </li>
           <li className="header__li">
-            <Link className="header__link" to={`/category`}>
+            <Link className="header__link" to={`/listaproductos/Sahumo-&-Defumación`}>
               Sahumos
             </Link>
-            <ul className="header__sub-ul">
+            {/* <ul className="header__sub-ul">
               <li className="header__sub-li">
                 <Link className="header__link" to={`/category`}>
                   Sahumerios
@@ -81,7 +81,7 @@ const NavBar = () => {
                   Velas
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li className="header__li">
             <Link className="header__link" to={`/listaproductos/Herbo_Home`}>
@@ -99,7 +99,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="header__sub-li">
-                <Link className="header__link" to={`/listaproductos/Herbo_Home/Esencia_para_hornillo`}>
+                <Link className="header__link" to={`/Herbo_Home/Esencia_para_hornillo`}>
                   Esencias para hornillos
                 </Link>
               </li>
