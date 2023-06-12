@@ -45,17 +45,17 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="header__li">
-            <Link className="header__link" to={`/category`}>
+            <Link className="header__link" to={`/listaproductos/Herbo-Pets`}>
               Herbo Pets
             </Link>
             <ul className="header__sub-ul">
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`/listaproductos/Herbo-Pets/Fórmulas-Florales-Pets`}>
                   Formulas Florales
                 </Link>
               </li>
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`/listaproductos/Herbo-Pets/Brumas`}>
                   Brumas
                 </Link>
               </li>
@@ -84,69 +84,69 @@ const NavBar = () => {
             </ul> */}
           </li>
           <li className="header__li">
-            <Link className="header__link" to={`/listaproductos/Herbo_Home`}>
+            <Link className="header__link" to={`/listaproductos/Herbo-Home`}>
               Herbo Home
             </Link>
             <ul className="header__sub-ul">
               <li className="header__sub-li">
-                <Link className="header__link" to={`/categoria/tipo/Sales_de_Baño`}>
+                <Link className="header__link" to={`/listaproductos/Herbo-Home/Sales-de-Baño`}>
                   Sales de baño
                 </Link>
               </li>
-              <li className="header__sub-li">
+              {/* <li className="header__sub-li">
                 <Link className="header__link" to={`/category`}>
                   Difusores
                 </Link>
-              </li>
+              </li> */}
               <li className="header__sub-li">
-                <Link className="header__link" to={`/Herbo_Home/Esencia_para_hornillo`}>
+                <Link className="header__link" to={`listaproductos/Herbo-Home/Esencias-para-hornillos`}>
                   Esencias para hornillos
                 </Link>
               </li>
             </ul>
           </li>
           <li className="header__li">
-            <Link className="header__link" to={`/category`}>
+            <Link className="header__link" to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Formulas-Florales`}>
               Formula Floral
             </Link>
             <ul className="header__sub-ul">
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Tónicos-Herbales`}>
                   Tónicos herbales
                 </Link>
               </li>
             </ul>
           </li>
           <li className="header__li">
-            <Link className="header__link" to={`/category`}>
+            <Link className="header__link" to={`listaproductos/Aromaterapia`}>
               Aromaterapias
             </Link>
             <ul className="header__sub-ul">
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`listaproductos/Aromaterapia/Body-oils`}>
                   Body Oils
                 </Link>
               </li>
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`listaproductos/Aromaterapia/Brumas-Aúricas`}>
                   Brumas Auricas
                 </Link>
               </li>
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`listaproductos/Aromaterapia/Roll-on`}>
                   Roll On
                 </Link>
               </li>
               <li className="header__sub-li">
-                <Link className="header__link" to={`/category`}>
+                <Link className="header__link" to={`listaproductos/Aromaterapia/Aceites-Esceniales`}>
                   Aceites esenciales
                 </Link>
               </li>
-              <li className="header__sub-li">
+              {/* <li className="header__sub-li">
                 <Link className="header__link" to={`/category`}>
                   Unguento
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </li>
         </ul>

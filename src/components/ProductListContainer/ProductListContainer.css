@@ -5,8 +5,7 @@
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
-    flex-direction: row;
+    height: auto;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
 }
