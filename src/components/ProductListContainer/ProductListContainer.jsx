@@ -12,6 +12,21 @@ import { ProductCard } from "../ProductCard/ProductCard";
 import "./ProductListContainer.css";
 import { useParams } from "react-router-dom";
 
+
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
 export const ProductListContainer = () => {
   const [products, setProducts] = useState([]);
 
@@ -63,10 +78,11 @@ export const ProductListContainer = () => {
   }, [categoria,tipo]);
 
   return (
-    <div className="container">
+    <div className="products__container">
       {products.map((prod) => {
         return <ProductCard key={prod.id} data={prod} />;
       })}
     </div>
-  );
+
+  )
 };

@@ -6,6 +6,7 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import  ModalProductDetail  from "../ModalProductDetail/ModalProductDetail";
 import { CartContext } from "../../context/CartContext";
 import { ToastContainer, toast } from "react-toastify";
+import logo from '../../assets/logo.png'
 
 
 export const ProductCard = ({data}) => {
@@ -22,13 +23,22 @@ export const ProductCard = ({data}) => {
     handleShow;
   };
   
-
   return (
     <>
     <div className="card__container">
       <section className="card__header">
         <figure className="card__figure--product">
+          {
+          data.cover!= "" ? 
+            (
           <img className="card__img--product" src={data.cover} />
+            )
+
+          :(
+          <img className="card__img--product" src={logo} />
+
+          )
+          }
         </figure>
 
         <figure className="card__figure--info">

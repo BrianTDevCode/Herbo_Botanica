@@ -1,11 +1,17 @@
-.container{
+.products__container{
     
-    display: flex;
+    /* display: flex;
     width: 1360px;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
     height: auto;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(30px, auto);
+    justify-content: center;
+    outline: 3px solid red;
 }
