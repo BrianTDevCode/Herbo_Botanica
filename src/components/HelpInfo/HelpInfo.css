@@ -1,13 +1,13 @@
 .container__help{
     /* outline: 3px solid red; */
-    width: 1360px;
+    width: 1200px;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .footer{
-    height: 395px;
+    height: 420px;
     /* outline: 3px solid red; */
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     /* outline: 3px solid orange; */
     width: 95%;
     height: 85%;
-    margin-top: 40px;
+    
 
 }
 
