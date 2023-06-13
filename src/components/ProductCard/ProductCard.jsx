@@ -54,7 +54,7 @@ export const ProductCard = ({data}) => {
       </section>
     </div>
     <ModalProductDetail data={data} show={show} handleClose={handleClose}/>
-    <ToastContainer /> 
+    {/* <ToastContainer />  */}
     </>
     
   );
