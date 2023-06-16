@@ -65,8 +65,7 @@ export const ModalCheckout = () => {
           html: `<div >
             <img src="${logo}" alt="Logo" style="width: 100px; height: auto; position: absolute; top: 10px; left: 10px;" />
             <p style="margin-top: 75px;">
-            ¡Genial! Hemos recibido tu formulario y registro con éxito. Pronto nos pondremos en contacto contigo para continuar con tu compra. 
-            ¡Muchas gracias!
+            ¡Genial! Recibimos tu formulario y te vamos a estar contactando por mail para continuar con tu pedido. ¡Muchas gracias!
             </p>
           </div>`,
           showConfirmButton: false,

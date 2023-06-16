@@ -25,7 +25,7 @@ export const HomePage = () => {
         html: `<div >
           <img src="${LOGO}" alt="Logo" style="width: 100px; height: auto; position: absolute; top: 10px; left: 10px;" />
           <p style="margin-top: 75px;">
-            ¡Hola! Solo queríamos recordarte que en nuestro canal mayorista contamos con un monto mínimo de compra. Esto nos permite brindarte un mejor servicio y asegurarnos de que tu experiencia sea genial. Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos. ¡Estamos aquí para ayudarte en lo que necesites!
+          Hola! En nuestro canal mayorista contamos con un monto mínimo de compra. Podés ver los precios y montos en el Catálogo Mayorista. Cualquier duda, nos podés escribir y te ayudamos!
           </p>
         </div>`,
         showConfirmButton: true,

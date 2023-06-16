@@ -10,20 +10,30 @@ import { CartContext } from "../../context/CartContext";
 export const ProductItemCart = ({ data }) => {
   const { items, cleanCart, removeItem } = useContext(CartContext);
 
+  data.cantidad = [];
+
   let [quantity, setQuantity] = useState(1);
+  let [product, setProduct] = useState(data);
 
   const handleDecrementQuantity = () => {
     if (quantity > 1) {
-      quantity--;
-
+        
       setQuantity((prevConnt) => prevConnt - 1);
+      data.cantidad = quantity;
+      setProduct(data);
+      console.log(data);
     }
   };
 
   const handleIncrementQuantity = () => {
-  
-      quantity++;
+      //quantity++;
       setQuantity((prevConnt) => prevConnt + 1);
+      data.cantidad = quantity;
+     
+      setProduct(data);
+      console.log(data);
+     
+
     
   };
 

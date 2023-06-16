@@ -211,3 +211,8 @@
   color: #fff !important;  
   
 }
+
+
+.swal2-close:focus {
+  box-shadow: none !important;
+}
