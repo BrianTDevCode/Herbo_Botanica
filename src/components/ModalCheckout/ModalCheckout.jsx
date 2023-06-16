@@ -35,6 +35,7 @@ export const ModalCheckout = () => {
         nombre: item.nombre,
         categoria: item.categoria,
         tipo: item.tipo,
+        cantidad: item.cantidad
       };
       data.cart.push(obj);
     });
