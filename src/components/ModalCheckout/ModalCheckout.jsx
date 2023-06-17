@@ -4,6 +4,10 @@ import { Formik, Form, Field } from "formik";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import Swal from "sweetalert2";
 
 import { db } from "../../firebase/firebaseConfig";
@@ -18,6 +22,24 @@ export const ModalCheckout = () => {
   const { setItems, items } = useContext(CartContext);
   const [purchaseID, setPurchaseID] = useState("");
 
+
+
+
+
+  // mail js
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_gejbhkv', 'template_qc54lns', form.current, 'SWOR8plzU25IDySSw')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   const OnSubmit = async (values) => {
     let data = {
@@ -59,6 +81,7 @@ export const ModalCheckout = () => {
           cart: data.cart,
         });
         console.log("Document written with ID: ", docRef.id);
+        sendEmail();
 
         setItems([]);
 
@@ -93,7 +116,7 @@ export const ModalCheckout = () => {
       </div>
       <Formik
         initialValues={{
-          email: "",
+          user_email: "",
           deliveryMethod: "envio",
           country: "",
           firstName: "",
@@ -105,12 +128,13 @@ export const ModalCheckout = () => {
           phone: "",
         }}
         onSubmit={OnSubmit}
+       
         validate={(values) => {
           const errors = {};
 
           // Validar los campos requeridos
-          if (!values.email) {
-            errors.email = "Campo requerido";
+          if (!values.user_email) {
+            errors.user_email = "Campo requerido";
           }
           if (!values.country) {
             errors.country = "Campo requerido";
@@ -141,9 +165,10 @@ export const ModalCheckout = () => {
           <Field
             className="frm__input"
             type="text"
-            name="email"
+            name="user_email"
             placeholder="  Correo electrónico"
             required
+            
           />
 
           <div className="frm__label">FORMA DE ENTREGA</div>
@@ -250,7 +275,7 @@ export const ModalCheckout = () => {
             required
           />
 
-          <button className="frm__btn" type="submit">
+          <button className="frm__btn" type="submit" value="Send">
             Enviar Formulario
           </button>
         </Form>
