@@ -1,4 +1,6 @@
-import React, { useRef, useContext, useState } from "react";
+
+import { Navigate } from "react-router-dom";
+import { useContext, useState,useRef} from "react";
 import { CartContext } from "../../context/CartContext";
 import { Formik, Form, Field } from "formik";
 import Swal from "sweetalert2";
@@ -15,6 +17,8 @@ export const ModalCheckout = () => {
   const { setItems, items } = useContext(CartContext);
   const [purchaseID, setPurchaseID] = useState("");
   const [productos, setProductos] = useState("");
+
+
 
   const form = useRef();
 
@@ -85,7 +89,7 @@ export const ModalCheckout = () => {
 
         setItems([]);
 
-        sendEmail(formData);
+        //sendEmail(formData);
 
         Swal.fire({
           html: `<div>
@@ -107,7 +111,10 @@ export const ModalCheckout = () => {
   };
 
   return (
-    <section className="container checkout__container">
+
+  
+    items.length>0?(
+      <section className="container checkout__container">
       <div className="checkout__header">
         <figure className="checkout__figure">
           <img className="checkout__img" src={logo} alt="logo" />
@@ -286,5 +293,11 @@ export const ModalCheckout = () => {
         </Form>
       </Formik>
     </section>
-  );
+    ):(
+      
+      <Navigate to="/" /> 
+      
+    )
+    
+  );  
 };

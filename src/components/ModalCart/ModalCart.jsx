@@ -30,18 +30,38 @@ export const ModalCart = ({ show, handleClose }) => {
       </ModalHeader>
       <Modal.Body className="cart__body">
        {
-           items.map((item)=>{
+        items.length>0? (
+          items.map((item)=>{
             return (
               <ProductItemCart key={item.id} data ={item}/>
             )
-       })}
+       })
+        ): (
+          <p className="cart__productMessage">No hay productos en el carrito</p>
+        )
+          
+       
+       
+       }
       
       
       </Modal.Body>
 
       <div className="cart__btns">
-        <button className="cart__clear" onClick={() => cleanCart()}>Vaciar carrito</button>
-        <Link className="cart__continue" to={'/checkout'} onClick={handleClose} >Continuar compra</Link>
+        {
+          items.length>0?(
+            <>
+            <button className="cart__clear" onClick={() => cleanCart()}>Vaciar carrito</button>
+            <Link className="cart__continue" to={'/checkout'} onClick={handleClose} >Continuar compra</Link>
+            </>
+          ):(
+            <>
+            <button disabled className="cart__clear--disabled">Vaciar carrito</button>
+            <button disabled className="cart__continue--disabled">Continuar compra</button>
+            </>
+          )
+        }
+       
       </div>
     </Modal>
 

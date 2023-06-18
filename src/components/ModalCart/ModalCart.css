@@ -40,6 +40,11 @@
   
 }
 
+.cart__productMessage{
+  font-weight: bold;
+  text-align: center;
+}
+
 .cart__btns {
   /* outline: 3px solid red; */
   display: flex;
@@ -48,7 +53,7 @@
   margin-bottom: 20px;
 }
 
-.cart__continue {
+.cart__continue, .cart__continue--disabled {
   width: 216px;
   height: 36px;
   background: #177f77;
@@ -62,7 +67,7 @@
   text-decoration: none;
 }
 
-.cart__clear {
+.cart__clear, .cart__clear--disabled{
   width: 170px;
   height: 36px;
   background: #ffffff;
@@ -71,3 +76,6 @@
   color: #177f77;
 }
 
+.cart__continue--disabled, .cart__clear--disabled{
+  opacity: 60%;
+}
