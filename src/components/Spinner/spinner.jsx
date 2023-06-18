@@ -2,7 +2,7 @@ import * as React from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import './spinner.css'
 
-const Spinner = () => {
+export const Spinner = () => {
 	return (
 		<div className='spinner__container'>
             <h3 className='spinner__title'>Cargado productos...</h3>
@@ -11,4 +11,4 @@ const Spinner = () => {
 	);
 };
 
-export default Spinner;
+

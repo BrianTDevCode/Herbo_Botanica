@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, RefObject } from "react";
 import { db } from "../../firebase/firebaseConfig";
 import {
   collection,
@@ -17,6 +17,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import {Spinner}  from "../Spinner/spinner";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -26,6 +27,10 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+
+
+
+
 
 export const ProductListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -78,11 +83,20 @@ export const ProductListContainer = () => {
   }, [categoria,tipo]);
 
   return (
+
+    products.length == 0 ? (
+      
+      <div className="Spinner">
+        <Spinner />
+      </div>
+      ):( 
     <div className="products__container">
       {products.map((prod) => {
         return <ProductCard key={prod.id} data={prod} />;
       })}
     </div>
+    
+    )
 
   )
 };
