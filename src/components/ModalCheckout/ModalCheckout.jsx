@@ -1,29 +1,48 @@
-import React, { useRef, useContext, useState } from 'react';
-import { CartContext } from '../../context/CartContext';
-import { Formik, Form, Field } from 'formik';
-import Swal from 'sweetalert2';
-import { db } from '../../firebase/firebaseConfig';
-import { collection, addDoc } from 'firebase/firestore';
-import emailjs from 'emailjs-com';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import React, { useRef, useContext, useState } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Formik, Form, Field } from "formik";
+import Swal from "sweetalert2";
+import { db } from "../../firebase/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+import emailjs from "emailjs-com";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
-import logo from '../../assets/Logo_blanco.png';
-import './ModalCheckout.css';
+import logo from "../../assets/Logo_blanco.png";
+import "./ModalCheckout.css";
 
 export const ModalCheckout = () => {
   const { setItems, items } = useContext(CartContext);
-  const [purchaseID, setPurchaseID] = useState('');
-  const [productos, setProductos] = useState('');
+  const [purchaseID, setPurchaseID] = useState("");
+  const [productos, setProductos] = useState("");
 
   const form = useRef();
 
   const sendEmail = async (formData) => {
     try {
-      await emailjs.sendForm('service_gejbhkv', 'template_qc54lns', form.current, 'SWOR8plzU25IDySSw');
-      console.log('Email sent successfully.');
+      const templateParams = {
+        firstName: formData.user.firstName,
+        lastName: formData.user.lastName,
+        user_email: formData.user.user_email,
+        deliveryMethod: formData.user.deliveryMethod,
+        cart: formData.cart
+          .map(
+            (item) =>
+              `${item.tipo} ---- ${item.nombre} ---- cantidad: ${item.cantidad}`
+          )
+
+          .join("\n"),
+      };
+
+      await emailjs.send(
+        "service_gejbhkv",
+        "template_qc54lns",
+        templateParams,
+        "SWOR8plzU25IDySSw"
+      );
+      console.log("Email sent successfully.");
     } catch (error) {
-      console.log('Error sending email:', error);
+      console.log("Error sending email:", error);
     }
   };
 
@@ -39,29 +58,30 @@ export const ModalCheckout = () => {
 
     try {
       const resp = await Swal.fire({
-        title: 'Confirmar compra',
-        text: '¿Desea confirmar la compra?',
-        icon: 'question',
+        title: "Confirmar compra",
+        text: "¿Desea confirmar la compra?",
+        icon: "question",
         showCancelButton: true,
-        confirmButtonText: 'Sí',
-        cancelButtonText: 'No',
-        confirmButtonColor: '#2b52e0',
-        cancelButtonColor: '#dc3545',
+        confirmButtonText: "Sí",
+        cancelButtonText: "No",
+        confirmButtonColor: "#2b52e0",
+        cancelButtonColor: "#dc3545",
       });
 
       if (resp.isConfirmed) {
-        const docRef = await addDoc(collection(db, 'pedidos'), {
+        const docRef = await addDoc(collection(db, "pedidos"), {
           user: formData.user,
           cart: formData.cart,
         });
-        console.log('Document written with ID:', docRef.id);
+        console.log("Document written with ID:", docRef.id);
 
         const cartItems = formData.cart
-          .map((item) => `${item.tipo} - ${item.nombre} - cantidad: ${item.cantidad}`)
-          .join('\n');
+          .map(
+            (item) =>
+              `${item.tipo} - ${item.nombre} - cantidad: ${item.cantidad}`
+          )
+          .join("\n");
         setProductos(cartItems);
-        
-        
 
         setItems([]);
 
@@ -75,13 +95,14 @@ export const ModalCheckout = () => {
             </p>
           </div>`,
           showConfirmButton: false,
-          confirmButtonColor: '#28a745',
-          background: 'linear-gradient(177deg, rgba(159, 180, 179, 1) 0%, rgba(255, 255, 255, 1) 100%)',
+          confirmButtonColor: "#28a745",
+          background:
+            "linear-gradient(177deg, rgba(159, 180, 179, 1) 0%, rgba(255, 255, 255, 1) 100%)",
           showCloseButton: true,
         });
       }
     } catch (error) {
-      console.error('Error al confirmar la compra:', error);
+      console.error("Error al confirmar la compra:", error);
     }
   };
 
@@ -95,17 +116,17 @@ export const ModalCheckout = () => {
       </div>
       <Formik
         initialValues={{
-          user_email: '',
-          deliveryMethod: 'envio',
-          country: '',
-          firstName: '',
-          lastName: '',
-          address: '',
-          number: '',
-          apartment: '',
-          postalCode: '',
-          city: '',
-          phone: '',
+          user_email: "",
+          deliveryMethod: "envio",
+          country: "",
+          firstName: "",
+          lastName: "",
+          address: "",
+          number: "",
+          apartment: "",
+          postalCode: "",
+          city: "",
+          phone: "",
         }}
         onSubmit={onSubmit}
         validate={(values) => {
@@ -113,75 +134,152 @@ export const ModalCheckout = () => {
 
           // Validar los campos requeridos
           if (!values.user_email) {
-            errors.user_email = 'Campo requerido';
+            errors.user_email = "Campo requerido";
           }
           if (!values.country) {
-            errors.country = 'Campo requerido';
+            errors.country = "Campo requerido";
           }
           if (!values.firstName) {
-            errors.firstName = 'Campo requerido';
+            errors.firstName = "Campo requerido";
           }
           if (!values.lastName) {
-            errors.lastName = 'Campo requerido';
+            errors.lastName = "Campo requerido";
           }
           if (!values.address) {
-            errors.address = 'Campo requerido';
+            errors.address = "Campo requerido";
           }
           if (!values.postalCode) {
-            errors.postalCode = 'Campo requerido';
+            errors.postalCode = "Campo requerido";
           }
           if (!values.city) {
-            errors.city = 'Campo requerido';
+            errors.city = "Campo requerido";
           }
           if (!values.phone) {
-            errors.phone = 'Campo requerido';
+            errors.phone = "Campo requerido";
           }
 
           return errors;
         }}
       >
         <Form className="checkout__frm" ref={form}>
-          <Field className="frm__input" type="text" name="user_email" placeholder="  Correo electrónico" required />
+          <Field
+            className="frm__input"
+            type="text"
+            name="user_email"
+            placeholder="  Correo electrónico"
+            required
+          />
 
           <div className="frm__label">FORMA DE ENTREGA</div>
           <div className="frm__radio">
             <div className="frm__opcion">
-              <Field type="radio" id="envio" name="deliveryMethod" value="envio" required />
-              <ShoppingCartIcon style={{ height: '2em' }} className="frm__icon" />
+              <Field
+                type="radio"
+                id="envio"
+                name="deliveryMethod"
+                value="envio"
+                required
+              />
+              <ShoppingCartIcon
+                style={{ height: "2em" }}
+                className="frm__icon"
+              />
               <label htmlFor="envio">Envío</label>
             </div>
             <div className="frm__opcion">
-              <Field type="radio" id="retiro" name="deliveryMethod" value="retiro" required />
-              <LocalShippingIcon style={{ height: '2em' }} className="frm__icon" />
+              <Field
+                type="radio"
+                id="retiro"
+                name="deliveryMethod"
+                value="retiro"
+                required
+              />
+              <LocalShippingIcon
+                style={{ height: "2em" }}
+                className="frm__icon"
+              />
               <label htmlFor="retiro">Retiro</label>
             </div>
           </div>
 
           <div className="frm__label">Dirección de envío</div>
-          <Field className="frm__input" type="text" name="country" placeholder="  País" required />
+          <Field
+            className="frm__input"
+            type="text"
+            name="country"
+            placeholder="  País"
+            required
+          />
 
           <div className="frm__group">
-            <Field className="frm__input" type="text" name="firstName" placeholder="  Nombre" required />
+            <Field
+              className="frm__input"
+              type="text"
+              name="firstName"
+              placeholder="  Nombre"
+              required
+            />
 
-            <Field className="frm__input" type="text" name="lastName" placeholder="  Apellido" required />
+            <Field
+              className="frm__input"
+              type="text"
+              name="lastName"
+              placeholder="  Apellido"
+              required
+            />
           </div>
 
           <div className="frm__group">
-            <Field className="frm__input" type="text" name="address" placeholder="  Dirección" required />
+            <Field
+              className="frm__input"
+              type="text"
+              name="address"
+              placeholder="  Dirección"
+              required
+            />
 
-            <Field className="frm__input" type="text" name="number" placeholder="  Número" required />
+            <Field
+              className="frm__input"
+              type="text"
+              name="number"
+              placeholder="  Número"
+              required
+            />
           </div>
 
-          <Field className="frm__input" type="text" name="apartment" placeholder="  Apartamento, local, etc (opcional)" />
+          <Field
+            className="frm__input"
+            type="text"
+            name="apartment"
+            placeholder="  Apartamento, local, etc (opcional)"
+          />
 
           <div className="frm__group">
-            <Field className="frm__input" type="text" name="postalCode" placeholder="  Código postal" required />
+            <Field
+              className="frm__input"
+              type="text"
+              name="postalCode"
+              placeholder="  Código postal"
+              required
+            />
 
-            <Field className="frm__input" type="text" name="city" placeholder="  Ciudad" required />
+            <Field
+              className="frm__input"
+              type="text"
+              name="city"
+              placeholder="  Ciudad"
+              required
+            />
           </div>
 
-          <Field className="frm__input" type="text" name="phone" placeholder="  Teléfono" required />
-        
+          <Field
+            className="frm__input"
+            type="text"
+            name="phone"
+            placeholder="  Teléfono"
+            required
+          />
+
           <button className="frm__btn" type="submit">
             Confirmar compra
           </button>
