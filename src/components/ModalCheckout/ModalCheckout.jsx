@@ -1,11 +1,10 @@
-import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useRef, useContext, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { Formik, Form, Field } from 'formik';
 import Swal from 'sweetalert2';
 import { db } from '../../firebase/firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
-import { useContext, useState } from 'react';
-import { CartContext } from '../../context/CartContext';
-import { Formik, Form, Field } from 'formik';
+import emailjs from 'emailjs-com';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
@@ -17,98 +16,66 @@ export const ModalCheckout = () => {
   const [purchaseID, setPurchaseID] = useState('');
   const [productos, setProductos] = useState('');
 
-  let order = "hola";
-let data = {
-  cart: [],
-  user: [],
-};
   const form = useRef();
 
-  
-
-  const sendEmail = () => {
-    emailjs
-      .sendForm('service_gejbhkv', 'template_qc54lns', form.current, 'SWOR8plzU25IDySSw')
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+  const sendEmail = async (formData) => {
+    try {
+      await emailjs.sendForm('service_gejbhkv', 'template_qc54lns', form.current, 'SWOR8plzU25IDySSw');
+      console.log('Email sent successfully.');
+    } catch (error) {
+      console.log('Error sending email:', error);
+    }
   };
 
-  const OnSubmit = async (values) => {
-     data = {
-      cart: [],
+  const onSubmit = async (values) => {
+    const formData = {
+      cart: items,
       user: values,
     };
 
     const today = new Date();
     const now = today.toLocaleString();
-    data.user.purchaseDate = now;
-
-    items.forEach((item) => {
-      let obj = {
-        id: item.id,
-        nombre: item.nombre,
-        categoria: item.categoria,
-        tipo: item.tipo,
-        cantidad: item.cantidad,
-      };
-      data.cart.push(obj);
-    });
-    
+    formData.user.purchaseDate = now;
 
     try {
       const resp = await Swal.fire({
         title: 'Confirmar compra',
-        text: 'Desea confirmar la compra?',
+        text: '¿Desea confirmar la compra?',
         icon: 'question',
-        confirmButtonText: 'si',
+        showCancelButton: true,
+        confirmButtonText: 'Sí',
+        cancelButtonText: 'No',
         confirmButtonColor: '#2b52e0',
-        showDenyButton: true,
-        denyButtonText: 'no',
+        cancelButtonColor: '#dc3545',
       });
 
       if (resp.isConfirmed) {
         const docRef = await addDoc(collection(db, 'pedidos'), {
-          user: data.user,
-          cart: data.cart,
+          user: formData.user,
+          cart: formData.cart,
         });
-        console.log('Document written with ID: ', docRef.id);
+        console.log('Document written with ID:', docRef.id);
 
-        document.getElementById('inpPedido');
-
-        const cartItems = () => {
-           order = "";
-          data.cart.map((item) => {
-            order += `${item.tipo} - ${item.nombre} - cantidad:  ${item.cantidad} \n`;
-          });
-         
-    setProductos(order);
-
-          return str;
-        };
-        cartItems();
-
-         //sendEmail();
+        const cartItems = formData.cart
+          .map((item) => `${item.tipo} - ${item.nombre} - cantidad: ${item.cantidad}`)
+          .join('\n');
+        setProductos(cartItems);
+        
+        
 
         setItems([]);
 
+        sendEmail(formData);
+
         Swal.fire({
-          html: `<div >
+          html: `<div>
             <img src="${logo}" alt="Logo" style="width: 100px; height: auto; position: absolute; top: 10px; left: 10px;" />
             <p style="margin-top: 75px;">
-            ¡Genial! Recibimos tu formulario y te vamos a estar contactando por mail para continuar con tu pedido. ¡Muchas gracias!
+              ¡Genial! Recibimos tu formulario y te vamos a estar contactando por correo electrónico para continuar con tu pedido. ¡Muchas gracias!
             </p>
           </div>`,
           showConfirmButton: false,
           confirmButtonColor: '#28a745',
-          confirmButtonText: 'Entendido',
-          showCancelButton: false,
-          background: 'rgb(159, 180, 179)',
           background: 'linear-gradient(177deg, rgba(159, 180, 179, 1) 0%, rgba(255, 255, 255, 1) 100%)',
           showCloseButton: true,
         });
@@ -140,7 +107,7 @@ let data = {
           city: '',
           phone: '',
         }}
-        onSubmit={OnSubmit}
+        onSubmit={onSubmit}
         validate={(values) => {
           const errors = {};
 
@@ -208,21 +175,16 @@ let data = {
           <Field className="frm__input" type="text" name="apartment" placeholder="  Apartamento, local, etc (opcional)" />
 
           <div className="frm__group">
-            <Field className="frm__input" type="number" name="postalCode" placeholder="  Código postal" required />
+            <Field className="frm__input" type="text" name="postalCode" placeholder="  Código postal" required />
 
             <Field className="frm__input" type="text" name="city" placeholder="  Ciudad" required />
           </div>
 
-          <Field className="frm__input" type="tel" name="phone" placeholder="  Teléfono" required />
-
-          <Field type="text"  name="cart" value={order} />
-          {/* <Field type="text"  name="cart" value={JSON.stringify(data.cart)} /> */}
-
-          <div className="checkout__btn-container">
-            <button className="checkout__btn" type="submit">
-              Confirmar compra
-            </button>
-          </div>
+          <Field className="frm__input" type="text" name="phone" placeholder="  Teléfono" required />
+        
+          <button className="frm__btn" type="submit">
+            Confirmar compra
+          </button>
         </Form>
       </Formik>
     </section>
