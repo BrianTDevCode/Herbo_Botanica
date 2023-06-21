@@ -80,4 +80,9 @@
     bottom: 55%;
     left: 30%;
   }
+  .home__info{
+    margin-bottom: 0;
+    height: 280px;
+  }
+  
 }

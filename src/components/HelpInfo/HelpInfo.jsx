@@ -6,7 +6,7 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 
 export const HelpInfo = () => {
   return (
-    <section className="container__help footer">
+    <section className="container__help">
       <h2 className="footer__title">
         Cómo comprar en nuestra tienda mayorista
       </h2>

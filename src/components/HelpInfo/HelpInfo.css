@@ -1,9 +1,13 @@
 .container__help{
     /* outline: 3px solid red; */
-    width: 1200px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
 }
 
 .footer{
@@ -17,7 +21,7 @@
 .footer__cards{
     display: flex;
     /* outline: 3px solid orange; */
-    width: 95%;
+    width: 80%;
     height: 85%;
     
 
@@ -26,7 +30,7 @@
 .footer__title{
     color: #177f77;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 28px;
 
 }
 
@@ -68,6 +72,33 @@ height: 100px;
 .divIcons{
     height: 200px;
 }
-@media (max-width: 768px){
-    
+@media (max-width: 767px){
+    .container__help{
+        display: block;
+    }
+    .footer__title{
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    .footer_subtitle{
+        font-size: 14px;
+    }
+    .footer__cards{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .footer__article{
+        width: 100%;
+        
+    }
+    .divIcons{
+        height: 120px;
+    }
+    .card__figure{
+        height: 100%;
+        width: 60px;
+    }
 }
