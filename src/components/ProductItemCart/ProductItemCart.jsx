@@ -9,7 +9,7 @@ import { CartContext } from "../../context/CartContext";
 export const ProductItemCart = ({ data }) => {
   const { items, setItems, removeItem } = useContext(CartContext);
 
-  const [quantity, setQuantity] = useState(data.cantidad || 1);
+  const [quantity, setQuantity] = useState(1);
 
   const updateQuantity = (newQuantity) => {
     const updatedItems = items.map((item) =>
@@ -36,7 +36,7 @@ export const ProductItemCart = ({ data }) => {
     <>
       <section className="item__container">
         <figure className="item__figure">
-          <img src={imgCard} alt="" className="item__img" />
+          <img src={data.cover} alt="" className="item__img" />
         </figure>
         <div className="item__description">
           <p className="item__text">{data.nombre}</p>

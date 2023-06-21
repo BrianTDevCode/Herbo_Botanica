@@ -19,6 +19,7 @@ export const ProductCard = ({data}) => {
   const { addItem } = useContext(CartContext);
 
   const handleAddToCart = () => {
+    data.cantidad = 1;
     addItem(data);
     handleShow;
   };

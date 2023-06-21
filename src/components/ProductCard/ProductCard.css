@@ -37,6 +37,8 @@
 }
 .card__figure--footer{
   cursor: pointer;
+  position: absolute;
+  right: 6%;
 }
 
 .card__figure--info {
@@ -56,6 +58,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .card__title {
@@ -64,7 +67,7 @@
   /* outline: 2px solid orange; */
   margin-bottom: 30px;
   margin-left: 40px;
-  width: 75%;
+  width: 50%;
 }
 
 .card__img--info:hover {

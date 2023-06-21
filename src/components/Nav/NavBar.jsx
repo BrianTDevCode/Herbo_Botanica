@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
+import MenuIcon from '@mui/icons-material/Menu';
 import LOGO from "../../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ModalCart } from "../ModalCart/ModalCart";
@@ -17,6 +17,10 @@ const NavBar = () => {
   return (
     <header className="header">
       <div className="header__container">
+        <div className="header__menu">
+
+        <MenuIcon/>
+        </div>
         {/* <div className="divOut"></div> */}
         <Link className="header__link" to={`/`}>
           <figure className="header__figure">
