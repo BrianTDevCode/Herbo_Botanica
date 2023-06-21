@@ -11,7 +11,7 @@ export const CarouselHomePage = () => {
       id="carouselExampleAutoplaying"
       className="carousel slide"
       data-bs-ride="carousel"
-      style={{ height: "420px" }} // Modifica la altura del carrusel aquí
+      style={{ height: "420px", maxHeight: "138px" }} // Modifica la altura del carrusel aquí
     >
       <div className="carousel-inner">
         <div className="carousel-item active" data-bs-interval="5000">

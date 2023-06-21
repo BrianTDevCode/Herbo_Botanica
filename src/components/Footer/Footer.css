@@ -16,10 +16,16 @@
 .divConteiner {
   margin-top: 10px;
 }
-
-.divConteiner h2 {
+.divConteiner1 {
+  margin-top: 10px;
+}
+.divConteiner  h2 {
   font-size: 20px;
 }
+.divConteiner1  h2 {
+  font-size: 20px;
+}
+
 
 ul li {
   margin-top: 25px;
@@ -44,4 +50,13 @@ ul li {
 article h3{
   font-size: 20px;
   text-align: center;
+}
+@media (max-width: 700px){
+  .divConteiner1 {
+    display: none;
+  }
+  .divConteiner{
+    margin-top: 30px ;
+  }
+ 
 }

@@ -16,7 +16,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="divConteiner">
+        <div className="divConteiner1">
           <h2>Categorias</h2>
           
             <li className="ulConteiner">Inicio</li>

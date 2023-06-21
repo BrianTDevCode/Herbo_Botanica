@@ -68,3 +68,6 @@ height: 100px;
 .divIcons{
     height: 200px;
 }
+@media (max-width: 768px){
+    
+}
