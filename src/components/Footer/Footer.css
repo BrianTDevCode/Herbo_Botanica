@@ -58,5 +58,13 @@ article h3{
   .divConteiner{
     margin-top: 30px ;
   }
- 
+  .icon{
+    margin-left: 25px;
+  }
+  article h3{
+    font-size: 22px;
+  }
+  .sectionConteiner{
+    
+  }
 }

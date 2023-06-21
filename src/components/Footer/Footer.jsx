@@ -8,10 +8,10 @@ const Footer = () => {
       <section className="sectionConteiner">
         <div className="divConteiner">
           <ul>
-            <li>
+            <li className="instagram">
               <FaInstagram className="icon" /> Instagram
             </li>
-            <li>
+            <li className="facebook">
               <FaFacebook className="icon" /> Facebook
             </li>
           </ul>
