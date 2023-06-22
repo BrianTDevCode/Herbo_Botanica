@@ -24,6 +24,7 @@ export const ModalCart = ({ show, handleClose }) => {
       onHide={handleClose}
       dialogClassName="modal__cart"
       className="cart__container"
+      contentClassName="cart_content"
     >
       <ModalHeader className="cart__header">
         <p>Carrito de compras</p>
