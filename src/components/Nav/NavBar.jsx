@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import LOGO from "../../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ModalCart } from "../ModalCart/ModalCart";
+import { ModalNavbarMobile } from "../ModalNavbarMobile/ModalNavbarMobile";
 import { CartContext } from "../../context/CartContext";
 
 const NavBar = () => {
@@ -18,7 +19,7 @@ const NavBar = () => {
     <header className="header">
       <div className="header__container">
         <div className="header__menu">
-          <MenuIcon />
+          <MenuIcon onClick={handleShow} />
         </div>
         {/* <div className="divOut"></div> */}
         <Link className="header__link" to={`/`}>
@@ -165,7 +166,8 @@ const NavBar = () => {
         </nav>
       </div>
 
-      <ModalCart show={show} handleClose={handleClose} />
+      {/* <ModalCart show={show} handleClose={handleClose} /> */}
+      <ModalNavbarMobile show={show} handleClose={handleClose}/>
     </header>
   );
 };

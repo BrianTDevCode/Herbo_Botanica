@@ -8,8 +8,10 @@
   font-weight: 500;
 }
 
+
+
 .header__menu {
-  /* display: none; */
+  display: none;
 }
 
 .header__container {
@@ -81,6 +83,11 @@
   position: relative;
   cursor: pointer;
   height: 45px;
+
+  display: inline-block; 
+  position: relative; 
+  padding: 3px 10px 3px 0;
+  z-index: 100;
 }
 
 .header__li.active {
@@ -97,10 +104,12 @@
   list-style: none;
 
   font-size: 16px;
-  z-index: 1;
+  z-index: 100;
   width: 100%;
   max-width: 100%;
   padding: 1px;
+
+ 
 }
 
 .header__li:hover > .header__sub-ul {
@@ -128,7 +137,9 @@
   color: inherit;
 }
 
-.header__ul,
+.header__ul{
+
+}
 .header__sub-ul {
   padding: 0;
   margin: 0;
