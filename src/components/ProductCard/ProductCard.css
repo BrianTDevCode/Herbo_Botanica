@@ -108,6 +108,7 @@
   .card__figure--info {
     position: relative;
     left: 75%;
+    width: 20px;
   
   }
 
