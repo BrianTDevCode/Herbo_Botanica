@@ -11,15 +11,17 @@ import { CartContext } from "../../context/CartContext";
 const NavBar = () => {
   const { items } = useContext(CartContext);
   const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
+  const [showMenu, setShowMenu] = useState(false);
+   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleCloseMenu = () => setShowMenu(false);
+  const handleShowMenu = () => setShowMenu(true);
 
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__menu">
-          <MenuIcon onClick={handleShow} />
+          <MenuIcon onClick={handleShowMenu} />
         </div>
         {/* <div className="divOut"></div> */}
         <Link className="header__link" to={`/`}>
@@ -28,9 +30,7 @@ const NavBar = () => {
           </figure>
         </Link>
 
-        {/* <div className="productCount__container">
-          {items.length > 0 && <div className="productCount__indicator" />}
-        </div> */}
+       
 
         <div className="header__cart">
           <ShoppingCartIcon
@@ -166,8 +166,8 @@ const NavBar = () => {
         </nav>
       </div>
 
-      {/* <ModalCart show={show} handleClose={handleClose} /> */}
-      <ModalNavbarMobile show={show} handleClose={handleClose}/>
+      <ModalCart show={show} handleClose={handleClose} />
+      <ModalNavbarMobile show={showMenu} handleClose={handleCloseMenu}/>
     </header>
   );
 };

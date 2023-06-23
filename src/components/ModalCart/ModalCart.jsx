@@ -13,9 +13,9 @@ export const ModalCart = ({ show, handleClose }) => {
 
   const {items, cleanCart } = useContext(CartContext);
 
-  const [showModal, setShowModal] = useState(false);
-  const handleCloseModal = () => setShowModal(false);
-  const handleShowModal = () => setShowModal(true);
+  // const [showModal, setShowModal] = useState(false);
+  // const handleCloseModal = () => setShowModal(false);
+  // const handleShowModal = () => setShowModal(true);
 
   return (
     <>
