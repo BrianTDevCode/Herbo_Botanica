@@ -81,14 +81,14 @@
   .products__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
     align-items: flex-start;
     min-height: auto;
     padding: 0 10px;
   }
 
   .card__container {
-    width: 45%;
+    width: 40%;
     height: 200px;
     margin: 5px 15px 0 0;
   }
@@ -102,12 +102,12 @@
   .card__figure--footer {
     position: absolute;
     right: 6%;
-    top: 6%;
+    top: 20%;
   }
 
   .card__figure--info {
     position: relative;
-    left:79%;
+    left: 75%;
   
   }
 

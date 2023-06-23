@@ -15,11 +15,9 @@
       flex-wrap: wrap; 
       justify-content: center; 
       align-items: flex-start; 
-      min-height: auto; 
+      min-height: 90vh; 
       padding: 0 10px; 
     }
   
-    .card__container {
-      width: 50%;
-    }
+    
   }
