@@ -1,10 +1,12 @@
 .modal__navDialog{
     position: relative;
-    top: 15%;
+    top: 11%;
+    left: 0% !important;
+    margin: 0 !important;
 }
 
 .modal__navContent{
-    width: 93%;
+    width: 90% !important;
 }
 
 .menu__header{
@@ -25,10 +27,11 @@ border-bottom: 2px solid #000;
 .navMobile__ul {
     display: flex;
     flex-direction: column;
+    margin-left: -32px;
 } 
 
 .navMobile__li{
-    margin: 20px 0;
+    margin: 8px 0;
     list-style: none;
     display: flex;
 }
@@ -50,5 +53,13 @@ border-bottom: 2px solid #000;
 }
 
 .navMobile__itemIcon{
-   
+    font-size: 30px;
+ }
+
+.navMobile__itemIcon:hover{
+   color: #177f77;
+}
+
+.navMobile__sub-ul{
+    display: none;
 }
