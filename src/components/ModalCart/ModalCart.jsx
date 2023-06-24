@@ -45,9 +45,6 @@ export const ModalCart = ({ show, handleClose }) => {
        
        }
       
-      
-      </Modal.Body>
-
       <div className="cart__btns">
         {
           items.length>0?(
@@ -64,6 +61,9 @@ export const ModalCart = ({ show, handleClose }) => {
         }
        
       </div>
+      </Modal.Body>
+
+     
     </Modal>
 
    
