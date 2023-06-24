@@ -88,8 +88,8 @@
   }
 
   .card__container {
-    width: 40%;
-    height: 200px;
+    width: 45%;
+    height: 250px;
     margin: 5px 15px 0 0;
   }
 
@@ -102,7 +102,7 @@
   .card__figure--footer {
     position: absolute;
     right: 6%;
-    top: 20%;
+    top: 38%;
   }
 
   .card__figure--info {
@@ -118,5 +118,12 @@
 
   .card__title {
     font-size: 12px;
+  }
+  .card__footer {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 }
