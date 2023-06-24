@@ -109,11 +109,14 @@
 .Mobile__Cart{
     display: flex;
     flex-direction: column;
-    width: 75px;
+    width: 50px;
+    height: 30px;
 
 }
 .item__figure{
-    width: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: 18px;
 }
 .item__description p{
     font-size: 10px;
@@ -121,22 +124,19 @@
 }
 .item__description{
     margin-left: 0px;
-    width:43vw;
+    width:80vw;
     margin: 0;
 }
 .item__quantity p{
     font-size: 20px;
-    margin-left: 20px;
-    position: absolute;
-    left: 29%;
-    top: 16%;
+    margin-top: 6px;
+    margin-left: 6px;
+   
 }
 .item__quantity{
-    width: 40%;
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    left: 36%;
+    width: 100%;
+    margin-left: 45px;
+    
 }
 .item__quantity--text{
     width: 100%;
@@ -148,6 +148,7 @@
 .item__container{
     margin-bottom: 0px;
     align-items: center;
+    
 }
 
 }

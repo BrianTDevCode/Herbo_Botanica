@@ -136,6 +136,11 @@
     font-size: 12px;
     
   }
+  .cart__continue--disabled{
+    margin-left: 12px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
   .modal__cart{
     left: 0% !important;
     top:0%;
