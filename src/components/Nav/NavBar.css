@@ -177,7 +177,7 @@
   .header__menu {
     display: block;
   }
-
+  
   .header__container {
     position: static;
     justify-content: space-evenly;
@@ -188,5 +188,9 @@
   }
   .nav__header1{
     display: none;
+  }
+  .header__cart-indicator{
+    top:21px;
+    right:30px;
   }
 }

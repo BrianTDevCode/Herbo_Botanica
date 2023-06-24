@@ -35,12 +35,14 @@ export const ProductItemCart = ({ data }) => {
   return (
     <>
       <section className="item__container">
-        <figure className="item__figure">
+       <div className="Mobile__Cart">
+       <figure className="item__figure">
           <img src={data.cover} alt="" className="item__img" />
         </figure>
         <div className="item__description">
           <p className="item__text">{data.nombre}</p>
         </div>
+       </div>
 
         <div className="item__quantity">
           {quantity > 1 && (
