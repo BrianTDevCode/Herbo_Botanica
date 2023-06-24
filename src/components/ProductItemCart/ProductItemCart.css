@@ -121,17 +121,22 @@
 }
 .item__description{
     margin-left: 0px;
-    width: 100%;
+    width:43vw;
+    margin: 0;
 }
 .item__quantity p{
     font-size: 20px;
     margin-left: 20px;
+    position: absolute;
+    left: 29%;
+    top: 16%;
 }
 .item__quantity{
     width: 40%;
     padding: 0px;
     margin: 0px;
-    margin-left: 45px;
+    position: relative;
+    left: 36%;
 }
 .item__quantity--text{
     width: 100%;

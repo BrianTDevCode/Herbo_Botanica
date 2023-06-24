@@ -7,6 +7,10 @@
   top:25%
 }
 
+.item__container{
+  position: relative;
+}
+
 .cart_content{
 
   right: 34%;
@@ -14,7 +18,11 @@
   position: relative;
 }
 
-
+.item__delete{
+  position: absolute;
+  left: 90%;
+  bottom: 70%;
+}
 
 .item__quantity svg{
   font-size: 25px;
@@ -80,6 +88,8 @@
   text-decoration: none;
 }
 
+
+
 .cart__clear, .cart__clear--disabled{
   width: 170px;
   height: 36px;
@@ -134,4 +144,6 @@
   .cart_content{
     right: 0%;
   }
+
+ 
 }
