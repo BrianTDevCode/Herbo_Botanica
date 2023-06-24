@@ -8,6 +8,7 @@
 }
 
 .cart_content{
+
   right: 34%;
 }
 
@@ -39,6 +40,7 @@
   /* outline: 3px solid red; */
   display: flex;
   flex-direction: column;
+  overflow-x: scroll;
   
 }
 
