@@ -18,6 +18,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
    else{
     element.style.display = 'none';
    }
+
+  
    
   }
 
@@ -57,21 +59,22 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
               </Link>
             </li>
             <li className="navMobile__li">
-              <Link className="header__link" to={`/listaproductos/Herbo-Pets`}>
+              <div className="cat__container">
                 <div className="navMobile__item">
+              <Link className="" to={`/listaproductos/Herbo-Pets`}>
                 <p className="navMobile__cat"> Herbo Pets</p> 
+              </Link>
                 <button onClick={() => showSubCat('ul__pets')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
-
                 </div>
-              </Link>
+                </div>
               <ul id="ul__pets" className="navMobile__sub-ul">
 
                 <li className="navMobile__sub-li">
                   <Link
-                    className="header__link"
+                    className=""
                     to={`/listaproductos/Herbo-Pets/Fórmulas-Florales-Pets`}
                   >
                     <p className="navMobile__Subcat"> Florales Pets</p>
@@ -91,7 +94,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
             </li>
             <li className="navMobile__li">
               <Link
-                className="header__link"
+                className=""
                 to={`/listaproductos/Sahumo-&-Defumación`}
               >
                <div className="navMobile__item">
@@ -101,23 +104,24 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
               </Link>
             </li>
             <li className="navMobile__li">
-              <Link className="header__link" to={`/listaproductos/Herbo-Home`}>
-               
+            <div className="cat__container">
               <div className="navMobile__item">
+              <Link className="header__link" to={`/listaproductos/Herbo-Home`}>
                 <p className="navMobile__cat"> Herbo Home</p> 
       
+              </Link>
 
                 <button onClick={() => showSubCat('ul__home')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
                 </div>
+                </div>
 
-              </Link>
               <ul id="ul__home" className="navMobile__sub-ul">
                 <li className="navMobile__sub-li">
                   <Link
-                    className="header__link"
+                    className=""
                     to={`/listaproductos/Herbo-Home/Sales-de-Baño`}
                   >
                     <p className="navMobile__Subcat">Sales de baño </p>
@@ -126,7 +130,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
 
                 <li className="navMobile__sub-li">
                   <Link
-                    className="header__link"
+                    className=""
                     to={`listaproductos/Herbo-Home/Esencias-para-hornillos`}
                   >
                     <p className="navMobile__Subcat">Esencias para hornillos</p> 
@@ -135,18 +139,19 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
               </ul>
             </li>
             <li className="navMobile__li">
-              <Link
-                className="header__link"
-                to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Formulas-Florales`}
-              >
+               
+            <div className="cat__container">
                 <div className="navMobile__item">
+              <Link className=""
+                to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Formulas-Florales`}>
                 <p className="navMobile__cat">Florales & Tónicos Herbales </p> 
+              </Link>
                 <button onClick={() => showSubCat('ul__florales')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
                 </div>
-              </Link>
+               </div>
               <ul id="ul__florales" className="navMobile__sub-ul">
                 <li className="navMobile__sub-li">
                   <Link
@@ -159,17 +164,18 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
               </ul>
             </li>
             <li className="navMobile__li">
-              <Link className="header__link" to={`listaproductos/Aromaterapia`}>
-                 
+            <div className="cat__container">
               <div className="navMobile__item">
+              <Link className="" to={`listaproductos/Aromaterapia`}>
                 <p className="navMobile__cat"> Aromaterapias</p> 
+              </Link>
                 <button onClick={() => showSubCat('ul__arpmaterapias')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
                 </div>
+                </div>
 
-              </Link>
               <ul id="ul__arpmaterapias" className="navMobile__sub-ul">
                 <li className="navMobile__sub-li">
                   <Link
@@ -189,7 +195,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                 </li>
                 <li className="navMobile__sub-li">
                   <Link
-                    className="header__link"
+                    className=""
                     to={`listaproductos/Aromaterapia/Roll-on`}
                   >
                     <p className="navMobile__Subcat">Roll on</p>
@@ -197,7 +203,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                 </li>
                 <li className="navMobile__sub-li">
                   <Link
-                    className="header__link"
+                    className=""
                     to={`listaproductos/Aromaterapia/Aceites-Esceniales`}
                   >
                     <p className="navMobile__Subcat">Aceitas escenciales</p>

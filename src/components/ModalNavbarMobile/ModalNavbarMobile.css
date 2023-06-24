@@ -44,36 +44,46 @@ border-bottom: 2px solid #000;
 
 .navMobile__item{
     display: flex;
-    /* outline: 3px solid red; */
-  
+    justify-content: space-between;
+    /* outline: 3px solid orange; */
+    flex-wrap: nowrap;
+    position: relative;
     width: 80vw;
     margin-bottom: 10px;
    
 
 }
 
-
+.navMobile__link{
+    /* border: 3px solid blueviolet; */
+    width: 90%;
+}
 
 .navMobile__cat{
-    width: 92%;
+    /* min-width: 92%; */
+    height: 90%;
+    /* outline: 3px solid black; */
 }
 
 .navMobile__Subcat{
     font-weight: 600;
-
+    /* outline: 5px solid red; */
+    position: absolute;
+    
+    
 }
 
 .navMobile__itemIcon{
-    font-size: 30px;
+    font-size: 35px !important;
+    position: relative;
+    top: -5px;
  }
 
-.navMobile__itemIcon:hover{
+/* .navMobile__itemIcon:hover{
    color: #177f77;
-}
+} */
 
-.navMobile__sub-ul{
-    display: none;
-}
+
 
 
 button{
@@ -82,9 +92,26 @@ button{
     background-color: #fff;
 }
 
-.navMobile__sub-ul{
-    /* outline: 3px solid green; */
+
+.cat__container{
     display: flex;
+    flex-direction: column;
+    /* outline: 3px solid blue; */
+    height: auto;
+   
+}
+
+
+
+.navMobile__sub-ul{
+     /* outline: 3px solid green; */
+
+     
+     top: -2vh;
+    margin: 0;
+    right: 300px;
+    margin-left: 10px;
+     display: none;
     flex-direction: column;
    position: relative;
    
@@ -94,7 +121,7 @@ button{
   
    height: 100%;
 
-    margin-top: 10vh;
+    margin-top: 10vh;  
 
 }
 
