@@ -3,6 +3,7 @@ import { ProductItemCart } from "../ProductItemCart/ProductItemCart";
 import Swal from "sweetalert2";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 import "./ModalCart.css";
 
 import Modal from "react-bootstrap/Modal";
@@ -28,6 +29,7 @@ export const ModalCart = ({ show, handleClose }) => {
     >
       <ModalHeader className="cart__header">
         <p>Carrito de compras</p>
+        <CloseIcon className="cart__close" onClick={() => handleClose()}/>
       </ModalHeader>
       <Modal.Body className="cart__body">
        {
