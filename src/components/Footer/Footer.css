@@ -64,5 +64,12 @@ article h3{
   article h3{
     font-size: 18px;
   }
-  
+  .h2Title{
+    font-size: 16px;
+  }
+  .ulConteiner {
+    margin-top: 7px;
+    list-style: none;
+    font-size: 13px;
+}
 }
