@@ -35,14 +35,14 @@ export const ProductItemCart = ({ data }) => {
   return (
     <>
       <section className="item__container">
-       <div className="Mobile__Cart">
-       <figure className="item__figure">
-          <img src={data.cover} alt="" className="item__img" />
-        </figure>
-        <div className="item__description">
-          <p className="item__text">{data.nombre}</p>
+        <div className="Mobile__Cart">
+          <figure className="item__figure">
+            <img src={data.cover} alt="" className="item__img" />
+          </figure>
+          <div className="item__description">
+            <p className="item__text">{data.nombre}</p>
+          </div>
         </div>
-       </div>
 
         <div className="item__quantity">
           {quantity > 1 && (
@@ -53,15 +53,15 @@ export const ProductItemCart = ({ data }) => {
             />
           )}
           {quantity === 1 && (
-            <RemoveIcon
-              style={{ fontSize: "25px", color: "#EBEBEB" }}
-              className="item__quantity--minus"
-              onClick={handleDecrementQuantity}
-            />
+           <RemoveIcon
+           style={{ fontSize: "25px", color: "#EBEBEB"}}
+           className="item__quantity--minus"
+           onClick={handleDecrementQuantity}
+         />
           )}
           <p className="item__quantity--text">{quantity}</p>
           <AddIcon
-            style={{ fontSize: "25px" }}
+            style={{ fontSize: "25px", marginRight: "20px" }}
             className="item__quantity--plus"
             onClick={handleIncrementQuantity}
           />

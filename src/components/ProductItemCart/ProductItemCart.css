@@ -114,9 +114,9 @@
 
 }
 .item__figure{
-    width: 50px;
-    height: 50px;
-    margin-left: 18px;
+    width: 70px;
+    height: 70px;
+    
 }
 .item__description p{
     font-size: 10px;
@@ -125,16 +125,16 @@
 .item__description{
     margin-left: 0px;
     width:80vw;
-    margin: 0;
+    margin: -11px;
 }
 .item__quantity p{
     font-size: 20px;
     margin-top: 6px;
-    margin-left: 6px;
+    margin-left: 12px;
    
 }
 .item__quantity{
-    width: 100%;
+    width: 50%;
     margin-left: 45px;
     
 }
@@ -148,6 +148,7 @@
 .item__container{
     margin-bottom: 0px;
     align-items: center;
+    height: 140px;
     
 }
 

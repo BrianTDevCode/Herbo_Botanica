@@ -18,10 +18,10 @@
   position: relative;
 }
 
-.item__delete{
+.item__delete {
   position: absolute;
-  left: 90%;
-  bottom: 70%;
+  left: 85%;
+  bottom: 66%;
 }
 
 .item__quantity svg{
