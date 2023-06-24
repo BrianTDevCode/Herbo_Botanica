@@ -1,43 +1,38 @@
-import { useState } from "react"
-import Footer from "./components/Footer/Footer"
-import NavBar from "./components/Nav/NavBar"
-import { HomePage } from "./components/HomePage/HomePage"
-import {ProductListContainer} from "./components/ProductListContainer/ProductListContainer"
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import { ModalCheckout } from "./components/ModalCheckout/ModalCheckout"
-import { CartProvider } from "./context/CartContext"
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
 
-
-
+import NavBar from "./components/Nav/NavBar";
+import { HomePage } from "./components/HomePage/HomePage";
+import { ProductListContainer } from "./components/ProductListContainer/ProductListContainer";
+import { ModalCheckout } from "./components/ModalCheckout/ModalCheckout";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
-
-  const [modalOpen,setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    
-    
-<CartProvider>
-<BrowserRouter>
-        <NavBar/>
-    
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar />
+
         <Routes>
-          <Route path='/' element={<HomePage/>}/>
-           <Route path='/listaproductos/:categoria/:tipo' element={<ProductListContainer />}/>
-           <Route path='/listaproductos/:categoria' element={<ProductListContainer />}/>
-           <Route path='/checkout' element={<ModalCheckout/>}/>
-{/*            
-          <Route path='/item/:id' element={<ItemDetailContainer />}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/checkout' element={<Checkout/>}/>  */}
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/listaproductos/:categoria/:tipo"
+            element={<ProductListContainer />}
+          />
+          <Route
+            path="/listaproductos/:categoria"
+            element={<ProductListContainer />}
+          />
+          <Route path="/checkout" element={<ModalCheckout />} />
+         
         </Routes>
-          <Footer/>
-        </BrowserRouter>
-        </CartProvider>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
+  );
+};
 
-
-   
-  )
-}
-
-export default App
+export default App;
