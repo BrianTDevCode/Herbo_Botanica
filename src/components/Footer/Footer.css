@@ -52,6 +52,9 @@ article h3{
   text-align: center;
 }
 @media (max-width: 700px){
+  .contenedorFooter{
+    height: 310px;
+  }
   .divConteiner1 {
     display: none;
   }
@@ -68,8 +71,8 @@ article h3{
     font-size: 16px;
   }
   .ulConteiner {
-    margin-top: 7px;
+    margin-top: 12px;
     list-style: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 }

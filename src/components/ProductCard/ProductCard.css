@@ -86,7 +86,7 @@
     height: 250px;
     align-content: center;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 0px 15px 0 0;
   }
 
