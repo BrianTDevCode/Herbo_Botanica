@@ -109,6 +109,7 @@
 .Mobile__Cart{
     display: flex;
     flex-direction: column;
+    width: 75px;
 
 }
 .item__figure{
@@ -124,19 +125,24 @@
 }
 .item__quantity p{
     font-size: 20px;
+    margin-left: 20px;
 }
 .item__quantity{
-    width: 100%;
+    width: 40%;
     padding: 0px;
     margin: 0px;
-    margin-left: 5px;
+    margin-left: 45px;
 }
 .item__quantity--text{
     width: 100%;
     height: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 500;
 }
 .item__container{
     margin-bottom: 0px;
     align-items: center;
 }
+
 }

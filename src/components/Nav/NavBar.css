@@ -190,7 +190,8 @@
     display: none;
   }
   .header__cart-indicator{
-    top:21px;
-    right:30px;
+    position: relative;
+    top: -17px;
+    right: 8px;
   }
 }
