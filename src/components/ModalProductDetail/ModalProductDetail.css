@@ -12,8 +12,8 @@
 .modalProductDetail__content{
   border-radius: 15px;
   background: linear-gradient(180deg, #F9F9F9 0%, #9AB0AF 100%);
-  height: 750px;
-
+  height: 600px;
+  width: 1000px;
 }
 
 .modal__product-header {
@@ -43,7 +43,7 @@ padding: 8px;
 .modal__product-title {
   font-style: normal;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 28px;
 }
 
 .header__figure-ProductDetail{
@@ -82,7 +82,7 @@ padding: 8px;
 .modal__product-detail {
   max-width: 1400px;
   display: flex;
-
+  justify-content: center;
 }
 
 .modal__product-body {
@@ -94,7 +94,7 @@ padding: 8px;
 
 .body__title--description, .body__title--use {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 38px;
   
 }
@@ -112,22 +112,27 @@ padding: 8px;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 0;
  
 }
-
+.body__description p{
+  font-size: 16px;
+}
+.body__use p{
+  font-size: 16px;
+}
 .body__figure {
   margin-top: 6%;
   /* outline: 3px solid blue; */
-  width: 309px;
-  height: 370px;
+  width: 35%;
+  height: 40%;
 }
 
 .body__img {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 25px;
+  
 }
 
 .body__use {
