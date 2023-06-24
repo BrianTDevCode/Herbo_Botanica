@@ -34,6 +34,7 @@ border-bottom: 2px solid #000;
     margin: 8px 0;
     list-style: none;
     display: flex;
+    position: relative;
 }
 
 .navMobile__li a{
@@ -44,12 +45,22 @@ border-bottom: 2px solid #000;
 .navMobile__item{
     display: flex;
     /* outline: 3px solid red; */
-    width: 280px;
+  
+    width: 80vw;
+    margin-bottom: 10px;
+   
 
 }
 
+
+
 .navMobile__cat{
     width: 92%;
+}
+
+.navMobile__Subcat{
+    font-weight: 600;
+
 }
 
 .navMobile__itemIcon{
@@ -64,3 +75,37 @@ border-bottom: 2px solid #000;
     display: none;
 }
 
+
+button{
+    /* outline: 3px solid blue; */
+    border: none;
+    background-color: #fff;
+}
+
+.navMobile__sub-ul{
+    /* outline: 3px solid green; */
+    display: flex;
+    flex-direction: column;
+   position: relative;
+   
+   right:86vw;
+   padding: 0;
+   margin-left: 8vw;
+  
+   height: 100%;
+
+    margin-top: 10vh;
+
+}
+
+.navMobile__sub-li{
+    /* outline: 3px solid blue; */
+   width: 200px;
+   height: 30px;
+   padding: 0;
+   margin-top: 0;
+   margin-bottom: 20px;
+   
+}
+
+ 

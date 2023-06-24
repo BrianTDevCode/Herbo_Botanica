@@ -9,8 +9,8 @@ import Modal from "react-bootstrap/Modal";
 import './ModalNavbarMobile.css'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
- const subCat = (par) =>{
-   const element = document.getElementById(par);
+ const showSubCat = (cat) =>{
+   const element = document.getElementById(cat);
    if(element.style.display == '' || element.style.display == 'none'){
 
      element.style.display = 'block';
@@ -60,7 +60,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
               <Link className="header__link" to={`/listaproductos/Herbo-Pets`}>
                 <div className="navMobile__item">
                 <p className="navMobile__cat"> Herbo Pets</p> 
-                <button onClick={() => subCat('ul__pets')}>
+                <button onClick={() => showSubCat('ul__pets')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
@@ -74,7 +74,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                     className="header__link"
                     to={`/listaproductos/Herbo-Pets/Fórmulas-Florales-Pets`}
                   >
-                    Formulas Florales Pets
+                    <p className="navMobile__Subcat"> Florales Pets</p>
                   </Link>
                 </li>
 
@@ -84,7 +84,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                     className="header__link"
                     to={`/listaproductos/Herbo-Pets/Brumas`}
                   >
-                    Brumas 
+                 <p className="navMobile__Subcat"> Brumas</p>
                   </Link>
                 </li>
               </ul>
@@ -107,7 +107,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                 <p className="navMobile__cat"> Herbo Home</p> 
       
 
-                <button onClick={() => subCat('ul__home')}>
+                <button onClick={() => showSubCat('ul__home')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
@@ -115,21 +115,21 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
 
               </Link>
               <ul id="ul__home" className="navMobile__sub-ul">
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`/listaproductos/Herbo-Home/Sales-de-Baño`}
                   >
-                    Sales de baño 
+                    <p className="navMobile__Subcat">Sales de baño </p>
                   </Link>
                 </li>
 
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`listaproductos/Herbo-Home/Esencias-para-hornillos`}
                   >
-                    Esencias para hornillos 
+                    <p className="navMobile__Subcat">Esencias para hornillos</p> 
                   </Link>
                 </li>
               </ul>
@@ -140,20 +140,20 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                 to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Formulas-Florales`}
               >
                 <div className="navMobile__item">
-                <p className="navMobile__cat">Formula Florales & Tónicos Herbales </p> 
-                <button onClick={() => subCat('ul__florales')}>
+                <p className="navMobile__cat">Florales & Tónicos Herbales </p> 
+                <button onClick={() => showSubCat('ul__florales')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
                 </div>
               </Link>
               <ul id="ul__florales" className="navMobile__sub-ul">
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Tónicos-Herbales`}
                   >
-                    Tónicos herbales 
+                    <p className="navMobile__Subcat">Tónicos herbales</p> 
                   </Link>
                 </li>
               </ul>
@@ -163,7 +163,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                  
               <div className="navMobile__item">
                 <p className="navMobile__cat"> Aromaterapias</p> 
-                <button onClick={() => subCat('ul__arpmaterapias')}>
+                <button onClick={() => showSubCat('ul__arpmaterapias')}>
                 <KeyboardArrowDownIcon className="navMobile__itemIcon"  />
 
                 </button>
@@ -171,36 +171,36 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
 
               </Link>
               <ul id="ul__arpmaterapias" className="navMobile__sub-ul">
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`listaproductos/Aromaterapia/Body-oils`}
                   >
-                    Body Oils
+                    <p className="navMobile__Subcat">Body oils</p>
                   </Link>
                 </li>
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`listaproductos/Aromaterapia/Brumas-Aúricas`}
                   >
-                    Brumas Auricas
+                    <p className="navMobile__Subcat">Brumas Aúricas</p>
                   </Link>
                 </li>
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`listaproductos/Aromaterapia/Roll-on`}
                   >
-                    Roll On
+                    <p className="navMobile__Subcat">Roll on</p>
                   </Link>
                 </li>
-                <li className="navMobile__li">
+                <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
                     to={`listaproductos/Aromaterapia/Aceites-Esceniales`}
                   >
-                    Aceites esenciales
+                    <p className="navMobile__Subcat">Aceitas escenciales</p>
                   </Link>
                 </li>
                 
