@@ -146,3 +146,47 @@
   font-size: 20px;
   line-height: 23px;
 }
+
+@media (max-width: 767px) {
+  .body__figure{
+     display: none;
+  }
+
+  .modal__product-body{
+    display: flex;
+    flex-direction: column;
+    /* outline: 3px solid red; */
+  }
+
+  .modalProductDetail__content{
+    width: 95vw;
+    height: auto;
+  }
+
+  .header__figure-ProductDetail{
+    left: 97%;
+    bottom: 70%;
+  }
+
+  .body__description{
+    width: 88%;
+    height: 68vh;
+    text-align: left;
+  }
+
+  .body__title--description{
+    text-align: center;
+  }
+
+  .body__use{
+    text-align: left;
+    width: 88%;
+    height: auto;
+    margin: 0 20px;
+    margin-bottom: 10px;
+  }
+
+  .body__title--use{
+    text-align: center;
+  }
+}
