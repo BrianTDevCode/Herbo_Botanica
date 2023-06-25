@@ -170,7 +170,7 @@
 
   .body__description{
     width: 88%;
-    height: 40vh;
+    height: auto;
     text-align: left;
   }
 
