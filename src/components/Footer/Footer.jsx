@@ -9,10 +9,15 @@ const Footer = () => {
         <div className="divConteiner">
           <ul>
             <li className="instagram">
-              <FaInstagram className="icon" /> Instagram
+              
+              <a href="https://instagram.com/herbo.botanica" target="_blank">
+                <FaInstagram className="icon" /> Instagram
+              </a>
             </li>
             <li className="facebook">
+              <a href="https://www.facebook.com/herbobotanica/" target="_blank">
               <FaFacebook className="icon" /> Facebook
+              </a>
             </li>
           </ul>
         </div>
@@ -30,11 +35,19 @@ const Footer = () => {
         <div className="divConteiner">
           <h2 className="h2Title">Contactanos</h2>
           <ul>
-            <li className="ulConteiner">541173633708</li>
-            <li className="ulConteiner">+54 911 73633708</li>
-            <li className="ulConteiner">hola@herbobotanica.com</li>
+            {/* <li className="ulConteiner">541173633708</li> */}
             <li className="ulConteiner">
-              Blanco Encalada 5034 Local 21, paseo de Homs Urquiza
+              <a href="https://wa.me/541173633708" target="_blank">541173633708</a>
+              </li>
+            <li className="ulConteiner">
+              <a href="https://wa.me/541173633708" target="_blank">+54 911 73633708</a>
+              </li>
+            <li className="ulConteiner">
+            <a href="mailto:hola@herbobotanica.com">hola@herbobotanica.com</a>
+            </li>
+            <li className="ulConteiner">
+             
+              <a href="https://goo.gl/maps/bGnCu52TFEp5o1f1A" target="_blank"> Blanco Encalada 5034 Local 21, paseo de Homs Urquiza</a>
             </li>
           </ul>
         </div>

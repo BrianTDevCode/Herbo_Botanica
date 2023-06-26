@@ -28,7 +28,7 @@ export const ProductCard = ({data}) => {
     <>
     <div className="card__container">
       <section className="card__header">
-        <figure className="card__figure--product">
+        <figure className="card__figure--product"  onClick = {handleShow}>
           {
           data.cover!= "" ? 
             (

@@ -1,13 +1,12 @@
-
 import { Navigate } from "react-router-dom";
-import { useContext, useState,useRef} from "react";
+import { useContext, useState, useRef } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Formik, Form, Field } from "formik";
 import Swal from "sweetalert2";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import emailjs from "emailjs-com";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import StoreIcon from '@mui/icons-material/Store';
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
 import logo from "../../assets/Logo_blanco.png";
@@ -19,6 +18,17 @@ export const ModalCheckout = () => {
   const [productos, setProductos] = useState("");
 
 
+  const pedido = ()=>{
+    const delivey = document.getElementsByName('deliveryMethod');
+    const divFrm = document.getElementById('datos__envio');
+    if (delivey[0].checked == true) {
+      divFrm.style.display = 'block';
+    }
+    else{
+      divFrm.style.display = 'none';
+
+    }
+  }
 
   const form = useRef();
 
@@ -29,6 +39,14 @@ export const ModalCheckout = () => {
         lastName: formData.user.lastName,
         user_email: formData.user.user_email,
         deliveryMethod: formData.user.deliveryMethod,
+        dni: formData.user.dni,
+        phone: formData.user.phone,
+        address: formData.user.address,
+        number: formData.user.number,
+        apartment: formData.user.apartment,
+        postalCode: formData.user.postalCode,
+        city: formData.user.city,
+        country: formData.user.country,
         cart: formData.cart
           .map(
             (item) =>
@@ -89,7 +107,7 @@ export const ModalCheckout = () => {
 
         setItems([]);
 
-        //sendEmail(formData);
+        sendEmail(formData);
 
         Swal.fire({
           html: `<div>
@@ -110,11 +128,8 @@ export const ModalCheckout = () => {
     }
   };
 
-  return (
-
-  
-    items.length>0?(
-      <section className="container checkout__container">
+  return items.length > 0 ? (
+    <section className="container checkout__container">
       <div className="checkout__header">
         <figure className="checkout__figure">
           <img className="checkout__img" src={logo} alt="logo" />
@@ -134,23 +149,36 @@ export const ModalCheckout = () => {
           postalCode: "",
           city: "",
           phone: "",
+          dni:"",
         }}
         onSubmit={onSubmit}
         validate={(values) => {
           const errors = {};
-
-          // Validar los campos requeridos
+          const envio = document.getElementById('datos__envio');
+        
           if (!values.user_email) {
             errors.user_email = "Campo requerido";
           }
-          if (!values.country) {
+
+          if (!values.dni) {
             errors.country = "Campo requerido";
           }
+         
           if (!values.firstName) {
             errors.firstName = "Campo requerido";
           }
           if (!values.lastName) {
             errors.lastName = "Campo requerido";
+          }
+          if (!values.phone) {
+            errors.phone = "Campo requerido";
+          }
+
+          if (envio.style.display != 'none') {
+            
+          
+          if (!values.country) {
+            errors.country = "Campo requerido";
           }
           if (!values.address) {
             errors.address = "Campo requerido";
@@ -161,62 +189,60 @@ export const ModalCheckout = () => {
           if (!values.city) {
             errors.city = "Campo requerido";
           }
-          if (!values.phone) {
-            errors.phone = "Campo requerido";
+
+          if (!values.number) {
+            errors.number = "Campo requerido";
           }
+        }
 
           return errors;
         }}
       >
         <Form className="checkout__frm" ref={form}>
-          <Field
-            className="frm__input"
-            type="text"
-            name="user_email"
-            placeholder="  Correo electrónico"
-            required
-          />
-
           <div className="frm__label">FORMA DE ENTREGA</div>
+          <br/>
           <div className="frm__radio">
-            <div className="frm__opcion">
+
+          <div className="frm__opcion">
               <Field
+              
                 type="radio"
                 id="envio"
                 name="deliveryMethod"
                 value="envio"
                 required
-              />
-              <ShoppingCartIcon
-                style={{ height: "2em" }}
-                className="frm__icon"
-              />
-              <label htmlFor="envio">Envío</label>
-            </div>
-            <div className="frm__opcion">
-              <Field
-                type="radio"
-                id="retiro"
-                name="deliveryMethod"
-                value="retiro"
-                required
+                Checked={true}
+                onClick={() => pedido()}
               />
               <LocalShippingIcon
                 style={{ height: "2em" }}
                 className="frm__icon"
               />
-              <label htmlFor="retiro">Retiro</label>
+              <label htmlFor="envio">Envío</label>
             </div>
+        
+          <div className="frm__opcion">
+              <Field
+              defaultChecked
+                
+                type="radio"
+                id="retiro"
+                name="deliveryMethod"
+                value="retiro"
+                required
+                
+                onClick={() => pedido()}
+              />
+              <StoreIcon
+                style={{ height: "2em" }}
+                className="frm__icon"
+              />  
+              <label htmlFor="retiro">Retiro en tienda</label>
+            </div>
+        
           </div>
 
-          <div className="frm__label">Dirección de envío</div>
-          <Field
-            className="frm__input"
-            type="text"
-            name="country"
-            placeholder="  País"
-            required
-          />
+          <br/>
 
           <div className="frm__group">
             <Field
@@ -235,6 +261,37 @@ export const ModalCheckout = () => {
               required
             />
           </div>
+
+          <Field
+            className="frm__input"
+            type="number"
+            name="dni"
+            placeholder="  DNI"
+            required
+          />
+
+
+          <Field
+            className="frm__input"
+            type="text"
+            name="user_email"
+            placeholder="  Correo electrónico"
+            required
+          />
+
+       
+
+          {/* <div className="frm__label">Dirección de envío</div> */}
+        
+<Field
+            className="frm__input"
+            type="text"
+            name="phone"
+            placeholder="  Teléfono"
+            required
+          />
+
+            <div id="datos__envio" className="frm__envio">
 
           <div className="frm__group">
             <Field
@@ -279,25 +336,23 @@ export const ModalCheckout = () => {
             />
           </div>
 
+        
+
           <Field
             className="frm__input"
             type="text"
-            name="phone"
-            placeholder="  Teléfono"
+            name="country"
+            placeholder="  País"
             required
           />
-
+</div>
           <button className="frm__btn" type="submit">
             Confirmar compra
           </button>
         </Form>
       </Formik>
     </section>
-    ):(
-      
-      <Navigate to="/" /> 
-      
-    )
-    
-  );  
+  ) : (
+    <Navigate to="/" />
+  );
 };
