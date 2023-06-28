@@ -38,5 +38,9 @@
 
 
 @media (max-width: 767px) {
-
+    .catalog__title{
+        width: 6vh;
+        height: 0.8vh;
+    }
+    
 }  
