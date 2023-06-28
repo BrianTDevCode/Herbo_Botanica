@@ -237,12 +237,7 @@
   .frm__group .frm__input:last-child {
     margin-left: 0px;
   }
-  .frm__opcion input {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
+
     
   }
 
