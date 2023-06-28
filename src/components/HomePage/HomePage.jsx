@@ -36,6 +36,7 @@ export const HomePage = () => {
         showCancelButton: false,
         // background: "rgb(159, 180, 179)",
         background: "linear-gradient(177deg, rgba(159, 180, 179, 1) 0%, rgba(255, 255, 255, 1) 100%)",
+        
       });
 
       localStorage.setItem("hasShownAlert", "true");
