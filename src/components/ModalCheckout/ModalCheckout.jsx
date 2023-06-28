@@ -11,6 +11,8 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
 import logo from "../../assets/Logo_blanco.png";
 import "./ModalCheckout.css";
+import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
+import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
 
 export const ModalCheckout = () => {
   const { setItems, items } = useContext(CartContext);
@@ -351,6 +353,8 @@ export const ModalCheckout = () => {
           </button>
         </Form>
       </Formik>
+      <BtnCatalog/>
+      <BtnWhatsapp/>
     </section>
   ) : (
     <Navigate to="/" />

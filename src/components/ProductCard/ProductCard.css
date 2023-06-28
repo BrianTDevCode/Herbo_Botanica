@@ -74,7 +74,7 @@
   width: 65%;
 }
 
-.card__img--info:hover {
+.card__img--info:hover,.card__figure--footer:hover{
   color: #177f77;
 }
 

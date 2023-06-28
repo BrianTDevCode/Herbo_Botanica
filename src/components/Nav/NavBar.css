@@ -33,6 +33,11 @@
   right: 6%;
   top: 46%;
 }
+
+.header__cart:hover{
+  color: #177f77;
+}
+
 .header__cart-indicator {
   position: absolute;
   top: 17px;

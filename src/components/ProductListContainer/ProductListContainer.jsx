@@ -18,6 +18,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import {Spinner}  from "../Spinner/spinner";
+import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
+import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -94,9 +96,11 @@ export const ProductListContainer = () => {
       {products.map((prod) => {
         return <ProductCard key={prod.id} data={prod} />;
       })}
+      <BtnCatalog/>
+    <BtnWhatsapp/>
     </div>
+
     
     )
-
   )
 };
