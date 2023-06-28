@@ -29,7 +29,10 @@ export const ProductCard = ({data}) => {
     <div className="card__container">
       <section className="card__header">
         <figure className="card__figure--product"  onClick = {handleShow}>
-          {
+
+        <img className="card__img--product" src={data.cover} />
+
+          {/* {
           data.cover!= "" ? 
             (
           <img className="card__img--product" src={data.cover} />
@@ -39,7 +42,7 @@ export const ProductCard = ({data}) => {
           <img className="card__img--product" src={logo} />
 
           )
-          }
+          } */}
         </figure>
 
         <figure className="card__figure--info">

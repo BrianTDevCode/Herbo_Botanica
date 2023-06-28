@@ -34,9 +34,10 @@ export const HomePage = () => {
         confirmButtonColor: "#28a745",
         confirmButtonText: "Entendido",
         showCancelButton: false,
-        // background: "rgb(159, 180, 179)",
         background: "linear-gradient(177deg, rgba(159, 180, 179, 1) 0%, rgba(255, 255, 255, 1) 100%)",
-        
+        customClass:{
+          confirmButton: 'btn__infoMensaje'
+      },
       });
 
       localStorage.setItem("hasShownAlert", "true");

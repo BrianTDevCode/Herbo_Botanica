@@ -46,7 +46,7 @@
   z-index: 1;
 }
 
-.swal2-confirm {
+ .btn__infoMensaje {
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -55,7 +55,7 @@
   background: #177f77 !important;
   border-radius: 50px !important;
   border: none !important;
-}
+} 
 
 @media (min-width: 768px) {
   .home__info {

@@ -206,7 +206,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                     <p className="navMobile__Subcat">Roll on</p>
                   </Link>
                 </li>
-                <li className="navMobile__sub-li">
+                {/* <li className="navMobile__sub-li">
                   <Link
                     className=""
                     to={`listaproductos/Aromaterapia/Aceites-Esceniales`}
@@ -214,7 +214,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                   >
                     <p className="navMobile__Subcat">Aceitas escenciales</p>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>
