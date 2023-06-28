@@ -30,16 +30,13 @@
     height: 1vh;
     color: #fff;
     font-weight: bold;
-    font-size: .6rem;
-    width: 10vh;
+    font-size: .5rem;
+    width: 9vh;
     text-align: center;
     margin-top: -10px;
 }
 
 
 @media (max-width: 767px) {
-    .catalog__title{
-        width: 7vh ;
-       
-    }
+
 }  
