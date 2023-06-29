@@ -70,10 +70,7 @@
 @media (max-width: 800px) {
   .container {
     width: auto;
-  }
-
-  .div__carrusel{
-    margin-top: 60%;
+    margin-top: 210px;
   }
 
   .home__description {
