@@ -16,7 +16,7 @@ import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
 import { formControlClasses } from "@mui/material";
 
 export const ModalCheckout = () => {
-  const { setItems, items } = useContext(CartContext);
+  const { setItems, items,cleanCart } = useContext(CartContext);
 
   const [purchaseID, setPurchaseID] = useState("");
   const [productos, setProductos] = useState("");
@@ -28,8 +28,11 @@ export const ModalCheckout = () => {
     const delivey = document.getElementsByName("deliveryMethod");
     const divFrm = document.getElementById("datos__envio");
 
+  
+
+
     if (delivey[0].checked == true) {
-      divFrm.style.display = "block";
+       divFrm.style.display = "block";
 
       for (let i = 7; i < form.current.length; i++) {
         if (form.current[i].nodeName == "INPUT") {
@@ -39,7 +42,7 @@ export const ModalCheckout = () => {
         }
       }
     } else {
-      divFrm.style.display = "none";
+       divFrm.style.display = "none";
       for (let i = 7; i < form.current.length; i++) {
         if (form.current[i].nodeName == "INPUT") {
           form.current[i].required = false;
@@ -199,6 +202,9 @@ export const ModalCheckout = () => {
             errors.phone = "Campo requerido";
           }
 
+          if (values.deliveryMethod!='retiro') {
+            
+          
           if (!values.country) {
             errors.country = "Campo requerido";
           }
@@ -215,7 +221,8 @@ export const ModalCheckout = () => {
           if (!values.number) {
             errors.number = "Campo requerido";
           }
-
+        }
+         
           return errors;
         }}
       >
@@ -361,7 +368,11 @@ export const ModalCheckout = () => {
               Confirmar compra
             </button>
 
-            <Link className="frm__cancelarCompra" to={"/"}>
+            <Link className="frm__cancelarCompra" to={"/"}
+              onClick={()=>{
+                cleanCart();
+              }}
+            >
               Canelar compra
             </Link>
           </div>

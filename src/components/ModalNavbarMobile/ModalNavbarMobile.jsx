@@ -138,7 +138,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                 <div className="navMobile__item">
                   <Link
                     className=""
-                    to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Formulas-Florales`}
+                    to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales`}
                     onClick={() => handleClose()}
                   >
                     <p className="navMobile__cat">
@@ -150,7 +150,22 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                   </button>
                 </div>
               </div>
+
+
+           
+
               <ul id="ul__florales" className="navMobile__sub-ul">
+
+              <li className="navMobile__sub-li">
+                  <Link
+                    className=""
+                    to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales
+                    Formulas-Florales/Formulas-Florales`}
+                    onClick={() => handleClose()}
+                  >
+                    <p className="navMobile__Subcat">Formulas florales </p>
+                  </Link>
+                </li>
                 <li className="navMobile__sub-li">
                   <Link
                     className="header__link"
@@ -159,6 +174,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                   >
                     <p className="navMobile__Subcat">Tónicos herbales</p>
                   </Link>
+                  
                 </li>
               </ul>
             </li>

@@ -107,11 +107,20 @@ const NavBar = () => {
             <li className="header__li">
               <Link
                 className="header__link"
-                to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales/Formulas-Florales`}
+                to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales`}
               >
-                Formula Floral
+                Florales & Tónicos herbales
               </Link>
               <ul className="header__sub-ul">
+                <li className="header__sub-li">
+                  <Link
+                    className="header__link"
+                    to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales
+                    Formulas-Florales/Formulas-Florales`}
+                  >
+                    Formulas florales
+                  </Link>
+                </li>
                 <li className="header__sub-li">
                   <Link
                     className="header__link"
