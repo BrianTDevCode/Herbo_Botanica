@@ -4,7 +4,7 @@
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  margin-top: 20%; 
+  margin-top: 10%; 
 }
 
 
@@ -68,7 +68,7 @@
 @media (max-width: 800px) {
   .container {
     width: auto;
-    margin-top: 32%;
+    margin-top: 35%;
   }
 
   .home__description {
