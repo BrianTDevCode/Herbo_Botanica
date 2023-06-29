@@ -18,7 +18,7 @@ export const CarouselHomePage = () => {
           <figure className="banner__figure">
             <img
               src={banner1}
-              className="d-block w-100 h-100 banner__img" // Ajusta altura y ancho de la imagen
+              className="d-block w-100 h-100 banner__img"
               alt="banner"
             />
           </figure>
@@ -27,7 +27,7 @@ export const CarouselHomePage = () => {
           <figure className="banner__figure">
             <img
               src={banner2}
-              className="d-block w-100 h-100 banner__img" // Ajusta altura y ancho de la imagen
+              className="d-block w-100 h-100 banner__img"
               alt="banner"
             />
           </figure>
@@ -36,7 +36,7 @@ export const CarouselHomePage = () => {
           <figure className="banner__figure">
             <img
               src={banner3}
-              className="d-block w-100 h-100 banner__img" // Ajusta altura y ancho de la imagen
+              className="d-block w-100 h-100 banner__img"
               alt="banner"
             />
           </figure>
@@ -45,7 +45,7 @@ export const CarouselHomePage = () => {
           <figure className="banner__figure">
             <img
               src={banner4}
-              className="d-block w-100 h-100 banner__img" // Ajusta altura y ancho de la imagen
+              className="d-block w-100 h-100 banner__img"
               alt="banner"
             />
           </figure>

@@ -1,12 +1,7 @@
-import { ModalFooter, ModalHeader } from "react-bootstrap";
-import { ProductItemCart } from "../ProductItemCart/ProductItemCart";
-import Swal from "sweetalert2";
-import { useState } from "react";
+import { ModalHeader } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 import Modal from "react-bootstrap/Modal";
 import "./ModalNavbarMobile.css";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export const ModalNavbarMobile = ({ show, handleClose }) => {
@@ -37,8 +32,10 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
         <nav className="header__navMobile">
           <ul className="navMobile__ul">
             <li className="navMobile__li">
-              <Link className="header__link" to={`/`}
-              onClick={() => handleClose()}
+              <Link
+                className="header__link"
+                to={`/`}
+                onClick={() => handleClose()}
               >
                 <div className="navMobile__item">
                   <p className="navMobile__cat"> Home</p>
@@ -90,7 +87,6 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
               >
                 <div className="navMobile__item">
                   <p className="navMobile__cat"> Sahumos</p>
-                  {/* <ArrowForwardIcon className="navMobile__itemIcon"/> */}
                 </div>
               </Link>
             </li>
@@ -151,12 +147,8 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                 </div>
               </div>
 
-
-           
-
               <ul id="ul__florales" className="navMobile__sub-ul">
-
-              <li className="navMobile__sub-li">
+                <li className="navMobile__sub-li">
                   <Link
                     className=""
                     to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales
@@ -174,7 +166,6 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                   >
                     <p className="navMobile__Subcat">Tónicos herbales</p>
                   </Link>
-                  
                 </li>
               </ul>
             </li>

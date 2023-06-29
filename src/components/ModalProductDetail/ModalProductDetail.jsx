@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import Modal from "react-bootstrap/Modal";
 import CloseIcon from "@mui/icons-material/Close";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import imgCard from "../../assets/pruebaCard.png";
-import Button from "react-bootstrap/Button";
+
 
 import "./ModalProductDetail.css";
 import { CartContext } from "../../context/CartContext";

@@ -13,7 +13,7 @@ import logo from "../../assets/Logo_blanco.png";
 import "./ModalCheckout.css";
 import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
 import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
-import { formControlClasses } from "@mui/material";
+
 
 export const ModalCheckout = () => {
   const { setItems, items,cleanCart } = useContext(CartContext);
@@ -81,7 +81,7 @@ export const ModalCheckout = () => {
         templateParams,
         "SWOR8plzU25IDySSw"
       );
-      console.log("Email sent successfully.");
+      ;
     } catch (error) {
       console.log("Error sending email:", error);
     }
@@ -301,7 +301,7 @@ export const ModalCheckout = () => {
             required
           />
 
-          {/* <div className="frm__label">Dirección de envío</div> */}
+          
 
           <Field
             className="frm__input"

@@ -1,12 +1,10 @@
 import "./ProductCard.css";
 import { useContext, useState } from "react";
-import imgCard from "../../assets/pruebaCard.png";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import  ModalProductDetail  from "../ModalProductDetail/ModalProductDetail";
 import { CartContext } from "../../context/CartContext";
-import { ToastContainer, toast } from "react-toastify";
-import logo from '../../assets/logo.png'
+
 
 
 export const ProductCard = ({data}) => {
@@ -32,17 +30,7 @@ export const ProductCard = ({data}) => {
 
         <img className="card__img--product" src={data.cover} />
 
-          {/* {
-          data.cover!= "" ? 
-            (
-          <img className="card__img--product" src={data.cover} />
-            )
-
-          :(
-          <img className="card__img--product" src={logo} />
-
-          )
-          } */}
+       
         </figure>
 
         <figure className="card__figure--info">
@@ -58,7 +46,7 @@ export const ProductCard = ({data}) => {
       </section>
     </div>
     <ModalProductDetail data={data} show={show} handleClose={handleClose}/>
-    {/* <ToastContainer />  */}
+   
     </>
     
   );

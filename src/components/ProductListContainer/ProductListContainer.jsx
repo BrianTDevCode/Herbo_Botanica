@@ -1,4 +1,4 @@
-import React, { useState, useEffect, RefObject } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../../firebase/firebaseConfig";
 import {
   collection,
@@ -11,28 +11,19 @@ import {
 import { ProductCard } from "../ProductCard/ProductCard";
 import "./ProductListContainer.css";
 import { useParams } from "react-router-dom";
-
-
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import {Spinner}  from "../Spinner/spinner";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import { Spinner } from "../Spinner/spinner";
 import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
 import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
 
-
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: 'center',
+  textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-
-
-
-
 
 export const ProductListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -40,7 +31,7 @@ export const ProductListContainer = () => {
   //modal
   const [modalOpen, setmodalOpen] = useState(false);
 
-  let {categoria,tipo } = useParams();
+  let { categoria, tipo } = useParams();
 
   useEffect(() => {
     if (categoria != undefined) {
@@ -58,17 +49,12 @@ export const ProductListContainer = () => {
 
         setProducts(docs);
       };
-    getProductsByCat();
-
+      getProductsByCat();
     }
 
     if (tipo != undefined) {
-
       const getProductsByTipo = async () => {
-        const q = query(
-          collection(db, "productos"),
-          where("tipo", "==", tipo)
-        );
+        const q = query(collection(db, "productos"), where("tipo", "==", tipo));
         const querySnapshot = await getDocs(q);
 
         const docs = [];
@@ -78,29 +64,21 @@ export const ProductListContainer = () => {
 
         setProducts(docs);
       };
-    getProductsByTipo();
-
+      getProductsByTipo();
     }
+  }, [categoria, tipo]);
 
-  }, [categoria,tipo]);
-
-  return (
-
-    products.length == 0 ? (
-      
-      <div className="Spinner">
-        <Spinner />
-      </div>
-      ):( 
+  return products.length == 0 ? (
+    <div className="Spinner">
+      <Spinner />
+    </div>
+  ) : (
     <div className="products__container">
       {products.map((prod) => {
         return <ProductCard key={prod.id} data={prod} />;
       })}
-      <BtnCatalog/>
-    <BtnWhatsapp/>
+      <BtnCatalog />
+      <BtnWhatsapp />
     </div>
-
-    
-    )
-  )
+  );
 };

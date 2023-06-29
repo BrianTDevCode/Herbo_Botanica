@@ -23,7 +23,7 @@ const NavBar = () => {
         <div className="header__menu">
           <MenuIcon onClick={handleShowMenu} />
         </div>
-        {/* <div className="divOut"></div> */}
+        
         <Link className="header__link" to={`/`}>
           <figure className="header__figure">
             <img className="header__img" src={LOGO} alt="logo" />
