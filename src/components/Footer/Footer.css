@@ -18,6 +18,8 @@
 }
 .divConteiner1 {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .divConteiner  h2 {
   font-size: 20px;

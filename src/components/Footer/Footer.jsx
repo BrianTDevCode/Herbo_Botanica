@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,12 +25,16 @@ const Footer = () => {
         <div className="divConteiner1">
           <h2>Categorias</h2>
           
-            <li className="ulConteiner">Inicio</li>
-            <li className="ulConteiner">Sahumos</li>
-            <li className="ulConteiner">Herbo pets</li>
-            <li className="ulConteiner">Herbo home</li>
-            <li className="ulConteiner">Formulas floreales</li>
-            <li className="ulConteiner">Aromaterapia</li>
+
+          
+
+
+            <Link to={'/'} className="ulConteiner">Inicio</Link>
+            <Link to={`/listaproductos/Herbo-Pets`} className="ulConteiner">Herbo pets</Link>
+            <Link to={'/listaproductos/Sahumo-&-Defumación'} className="ulConteiner">Sahumos</Link>
+            <Link to={`/listaproductos/Herbo-Home`} className="ulConteiner">Herbo home</Link>
+            <Link to={`listaproductos/Fórmulas-Florales-&-Tónicos-Herbales`} className="ulConteiner">floreales & Tónicos herbales</Link>
+            <Link to={`listaproductos/Aromaterapia`} className="ulConteiner">Aromaterapias</Link>
           
         </div>
         <div className="divConteiner">

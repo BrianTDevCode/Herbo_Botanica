@@ -160,14 +160,7 @@ const NavBar = () => {
                     Roll On
                   </Link>
                 </li>
-                {/* <li className="header__sub-li">
-                  <Link
-                    className="header__link"
-                    to={`listaproductos/Aromaterapia/Aceites-Esceniales`}
-                  >
-                    Aceites esenciales
-                  </Link>
-                </li> */}
+                
                 
               </ul>
             </li>
