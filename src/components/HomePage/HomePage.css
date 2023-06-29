@@ -2,9 +2,9 @@
   /* outline: 3px solid red; */
   width: 1360px;
   height: 100%;
-  margin: 280px 0 auto;
+  margin: 0 auto;
   overflow: hidden;
-  margin-top: 10%; 
+  margin-top: 270px; 
 }
 
 
@@ -70,7 +70,7 @@
 @media (max-width: 800px) {
   .container {
     width: auto;
-    margin-top: 210px;
+    margin-top: 150px;
   }
 
   .home__description {
