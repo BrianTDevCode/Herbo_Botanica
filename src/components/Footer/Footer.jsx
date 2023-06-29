@@ -45,7 +45,7 @@ const Footer = () => {
               <a href="https://wa.me/541173633708" target="_blank">541173633708</a>
               </li>
             <li className="ulConteiner">
-              <a href="https://wa.me/541173633708" target="_blank">+54 911 73633708</a>
+            <a href="tel:+54 9 11 7363-3708">+54 9 11 7363-3708</a>
               </li>
             <li className="ulConteiner">
             <a href="mailto:hola@herbobotanica.com">hola@herbobotanica.com</a>
