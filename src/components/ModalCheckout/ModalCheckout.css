@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
+  margin-top: 10%;
 }
 
 .checkout__header {
@@ -230,6 +231,11 @@
   box-shadow: none !important;
 }
 @media (max-width: 767px) {
+
+  .checkout__container{
+    margin-top: 30%;
+  }
+
   .checkout__header {
     width: 100%;
   }
