@@ -60,9 +60,8 @@
 } 
 
 @media (min-width: 768px) {
-  .container {
-    margin-top: 45%;
-  }
+ 
+
   .home__info {
     margin-top: 250px;
   }
@@ -71,7 +70,10 @@
 @media (max-width: 800px) {
   .container {
     width: auto;
-    margin-top: 45%;
+  }
+
+  .div__carrusel{
+    margin-top: 35%;
   }
 
   .home__description {
