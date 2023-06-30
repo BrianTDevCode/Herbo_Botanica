@@ -372,7 +372,7 @@ export const ModalCheckout = () => {
                 cleanCart();
               }}
             >
-              Canelar compra
+              Cancelar compra
             </Link>
             <button className="frm__btn" type="submit">
               Confirmar compra
