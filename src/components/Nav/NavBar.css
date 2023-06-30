@@ -205,8 +205,11 @@
   }
   .header__cart-indicator{
     position: relative;
-    top: -17px;
-    right: 8px;
+    width: 8px;
+    height: 8px;
+    top: -26px;
+    right: -15px;
+    border: 1px solid #000;
   }
   .header__hamburgueza{
     font-size: 25px !important;
