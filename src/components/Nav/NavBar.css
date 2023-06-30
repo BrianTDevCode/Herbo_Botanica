@@ -216,3 +216,48 @@
     font-size: 25px !important;
   }
 }
+
+@media (orientation: landscape) {
+  .header{
+    height: 115px;
+  }
+  .header__figure {
+    width: 125px;
+    height: 60px;
+  }
+
+  .header__menu {
+    display: block;
+    position: relative;
+    top: 22px;
+    
+  }
+  
+  .header__container {
+    position: static;
+    justify-content: space-evenly;
+  }
+
+  .header__cart {
+    width: 30px ;
+    height: 30px;
+    display: block;
+    position: relative;
+    top: 20px;
+    right: 1px;
+  }
+  .nav__header1{
+    display: none;
+  }
+  .header__cart-indicator{
+    position: relative;
+    width: 8px;
+    height: 8px;
+    top: -26px;
+    right: -15px;
+    border: 1px solid #000;
+  }
+  .header__hamburgueza{
+    font-size: 25px !important;
+  }
+}
