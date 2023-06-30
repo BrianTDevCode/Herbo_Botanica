@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import LOGO from "../../assets/logo.png";
 import Swal from "sweetalert2";
 import home__svg from "../../assets/home.svg";
@@ -14,7 +15,11 @@ export const HomePage = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
   useEffect(() => {
+
+  
+   
     const hasShownAlert = localStorage.getItem("hasShownAlert");
 
     if (!hasShownAlert) {

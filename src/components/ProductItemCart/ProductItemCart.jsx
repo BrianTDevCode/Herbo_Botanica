@@ -7,18 +7,20 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 
 export const ProductItemCart = ({ data }) => {
-  const { items, setItems, removeItem } = useContext(CartContext);
+  const { items, setItems, removeItem,updeateLocalStorageInfo } = useContext(CartContext);
 
-  const [quantity, setQuantity] = useState(1);
+  let [quantity, setQuantity] = useState(1);
 
   const updateQuantity = (newQuantity) => {
     const updatedItems = items.map((item) =>
       item.id === data.id ? { ...item, cantidad: newQuantity } : item
     );
     setItems(updatedItems);
+    updeateLocalStorageInfo(updatedItems);
   };
 
   const handleDecrementQuantity = () => {
+    quantity = data.cantidad;
     if (quantity > 1) {
       const newQuantity = quantity - 1;
       setQuantity(newQuantity);
@@ -27,6 +29,7 @@ export const ProductItemCart = ({ data }) => {
   };
 
   const handleIncrementQuantity = () => {
+    quantity = data.cantidad;
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
     updateQuantity(newQuantity);
@@ -45,21 +48,21 @@ export const ProductItemCart = ({ data }) => {
         </div>
 
         <div className="item__quantity">
-          {quantity > 1 && (
+          {data.cantidad > 1 && (
             <RemoveIcon
               style={{ fontSize: "25px" }}
               className="item__quantity--minus"
               onClick={handleDecrementQuantity}
             />
           )}
-          {quantity === 1 && (
+          {data.cantidad === 1 && (
            <RemoveIcon
            style={{ fontSize: "25px", color: "#EBEBEB"}}
            className="item__quantity--minus"
            onClick={handleDecrementQuantity}
          />
           )}
-          <p className="item__quantity--text">{quantity}</p>
+          <p className="item__quantity--text">{data.cantidad}</p>
           <AddIcon
             style={{ fontSize: "25px", marginRight: "20px" }}
             className="item__quantity--plus"

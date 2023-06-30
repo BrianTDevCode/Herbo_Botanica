@@ -2,7 +2,7 @@ import "./NavBar.css";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import LOGO from "../../assets/logo.png";
+import logo from "../../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ModalCart } from "../ModalCart/ModalCart";
 import { ModalNavbarMobile } from "../ModalNavbarMobile/ModalNavbarMobile";
@@ -26,7 +26,7 @@ const NavBar = () => {
         
         <Link className="header__link" to={`/`}>
           <figure className="header__figure">
-            <img className="header__img" src={LOGO} alt="logo" />
+            <img className="header__img" src={logo} alt="logo" />
           </figure>
         </Link>
 

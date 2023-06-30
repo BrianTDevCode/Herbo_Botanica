@@ -134,7 +134,7 @@ export const ModalCheckout = () => {
 
         setItems([]);
 
-        //sendEmail(formData);
+        sendEmail(formData);
 
         Swal.fire({
           html: `<div>
@@ -256,6 +256,7 @@ export const ModalCheckout = () => {
                 name="deliveryMethod"
                 value="retiro"
                 required
+                
                 onClick={() => {
                   pedido();
                 }}
@@ -274,6 +275,7 @@ export const ModalCheckout = () => {
               name="firstName"
               placeholder="  Nombre"
               required
+              defaultChecked={false}
             />
 
             <Field
@@ -364,9 +366,6 @@ export const ModalCheckout = () => {
             />
           </div>
           <div className="frm__btns">
-            <button className="frm__btn" type="submit">
-              Confirmar compra
-            </button>
 
             <Link className="frm__cancelarCompra" to={"/"}
               onClick={()=>{
@@ -375,6 +374,9 @@ export const ModalCheckout = () => {
             >
               Canelar compra
             </Link>
+            <button className="frm__btn" type="submit">
+              Confirmar compra
+            </button>
           </div>
         </Form>
       </Formik>
