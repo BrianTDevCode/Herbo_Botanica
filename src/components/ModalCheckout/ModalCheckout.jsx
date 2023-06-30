@@ -132,7 +132,7 @@ export const ModalCheckout = () => {
           .join("\n");
         setProductos(cartItems);
 
-        setItems([]);
+        cleanCart();
 
         sendEmail(formData);
 
