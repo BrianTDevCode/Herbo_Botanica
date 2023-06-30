@@ -94,7 +94,6 @@ export const CartProvider = ({children}) => {
 
     useEffect(() => {
     checkLocalStorageInfo();
-    console.log(items)
     }, [])
     
 

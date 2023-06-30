@@ -250,7 +250,7 @@ export const ModalCheckout = () => {
 
             <div className="frm__opcion">
               <Field
-                defaultChecked
+                defaultChecked ={true}
                 type="radio"
                 id="retiro"
                 name="deliveryMethod"
