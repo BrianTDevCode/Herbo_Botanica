@@ -21,7 +21,7 @@ const NavBar = () => {
     <header className="header">
       <div className="header__container">
         <div className="header__menu">
-          <MenuIcon onClick={handleShowMenu} />
+          <MenuIcon className="header__hamburgueza" onClick={handleShowMenu} />
         </div>
         
         <Link className="header__link" to={`/`}>
