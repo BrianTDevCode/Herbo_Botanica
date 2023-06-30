@@ -132,3 +132,10 @@
     position: relative;
   }
 }
+
+
+@media (orientation: landscape) {
+ .card__container{
+    width: 25%;
+ }
+}

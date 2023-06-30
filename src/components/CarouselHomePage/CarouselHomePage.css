@@ -3,3 +3,6 @@
     height: 416px;
 }
 
+.banner__img{
+    object-fit: cover !important;
+}
