@@ -136,6 +136,6 @@
 
 @media (orientation: landscape) {
  .card__container{
-    width: 25%;
+    width: 200px;
  }
 }
