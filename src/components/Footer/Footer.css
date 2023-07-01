@@ -62,7 +62,7 @@ a{
 }
 @media (max-width: 700px){
   .contenedorFooter{
-    height: 310px;
+    height: 315px;
   }
   .divConteiner1 {
     display: none;

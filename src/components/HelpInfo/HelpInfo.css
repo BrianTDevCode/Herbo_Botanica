@@ -97,7 +97,7 @@ height: 100px;
     }
     .footer_subtitle{
         font-size: 10px;
-        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .footer_subtitle--top{
         font-size: 10px;
@@ -113,6 +113,7 @@ height: 100px;
    
     .footer__article{
         width: 90%;
+        height: 100%;
         flex-wrap: nowrap;
         margin: 0%;
         
