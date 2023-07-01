@@ -14,7 +14,7 @@ export const HelpInfo = () => {
       <section className="footer__cards">
         <article className="footer__article">
           <div className="divIcons">
-            <p className="footer_subtitle">Agrega productos al carrito</p>
+            <p className="footer_subtitle--top">Agrega productos al carrito</p>
           </div>
           <figure className="card__figure">
             <AddShoppingCartIcon
@@ -26,7 +26,7 @@ export const HelpInfo = () => {
 
         <article className="footer__article">
           <div className="divIcons">
-            <p className="footer_subtitle">
+            <p className="footer_subtitle--top">
               Nosotras te enviamos la cotización por mail
             </p>
           </div>
