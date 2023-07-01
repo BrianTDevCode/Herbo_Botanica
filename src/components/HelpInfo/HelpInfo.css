@@ -97,11 +97,11 @@ height: 100px;
     }
     .footer_subtitle{
         font-size: 10px;
-        margin-bottom: 0px;
+        margin: 0px;
     }
     .footer_subtitle--top{
         font-size: 10px;
-        margin-top: 60px;
+        margin: 0px;
     }
     .footer__cards{
         display: grid;
