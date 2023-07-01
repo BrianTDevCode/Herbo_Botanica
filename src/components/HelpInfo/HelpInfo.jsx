@@ -10,7 +10,7 @@ export const HelpInfo = () => {
       <h2 className="title__help">Cómo comprar en nuestra tienda mayorista</h2>
 
       <section className="info__help">
-        <div>
+        <div className="div__help">
           <article className="card__help">
             <p className="">Agrega productos al carrito</p>
 
@@ -34,7 +34,7 @@ export const HelpInfo = () => {
           </article>
         </div>
 
-        <div>
+        <div className="div__help">
           <article className="card__help">
             <p className="">Hacés el pago y ponemos manos a la obra.</p>
 
