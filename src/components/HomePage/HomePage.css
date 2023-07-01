@@ -74,7 +74,7 @@
 
   .home__description {
     font-size: 13px;
-    margin-top: -40px;
+    margin-top: 0px;
     line-height: 18px;
     font-weight: 500;
   }
@@ -87,6 +87,7 @@
   }
   .home__info{
     margin-bottom: 0;
+    margin-top: 0px;
     height: 280px;
   }
   

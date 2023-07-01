@@ -19,7 +19,7 @@ export const HelpInfo = () => {
           <figure className="card__figure">
             <AddShoppingCartIcon
               className="card__img"
-              style={{ fontSize: "100px" }}
+              style={{ fontSize: "70px" }}
             />
           </figure>
         </article>
@@ -33,7 +33,7 @@ export const HelpInfo = () => {
           <figure className="card__figure">
             <ForwardToInboxIcon
               className="card__img"
-              style={{ fontSize: "100px" }}
+              style={{ fontSize: "70px" }}
             />
           </figure>
         </article>
@@ -45,7 +45,7 @@ export const HelpInfo = () => {
             </p>
           </div>
           <figure className="card__figure">
-            <WalletIcon className="card__img" style={{ fontSize: "100px" }} />
+            <WalletIcon className="card__img" style={{ fontSize: "70px" }} />
           </figure>
         </article>
 
@@ -60,7 +60,7 @@ export const HelpInfo = () => {
           <figure className="card__figure">
             <InventoryIcon
               className="card__img"
-              style={{ fontSize: "100px" }}
+              style={{ fontSize: "70px" }}
             />
           </figure>
         </article>
