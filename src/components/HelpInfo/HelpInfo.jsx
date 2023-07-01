@@ -13,9 +13,9 @@ export const HelpInfo = () => {
 
       <section className="footer__cards">
         <article className="footer__article">
-          <div className="divIcons">
+        
             <p className="footer_subtitle--top">Agrega productos al carrito</p>
-          </div>
+         
           <figure className="card__figure">
             <AddShoppingCartIcon
               className="card__img"
@@ -25,11 +25,11 @@ export const HelpInfo = () => {
         </article>
 
         <article className="footer__article">
-          <div className="divIcons">
+         
             <p className="footer_subtitle--top">
               Nosotras te enviamos la cotización por mail
             </p>
-          </div>
+        
           <figure className="card__figure">
             <ForwardToInboxIcon
               className="card__img"
@@ -39,23 +39,23 @@ export const HelpInfo = () => {
         </article>
 
         <article className="footer__article">
-          <div className="divIcons">
+          
             <p className="footer_subtitle">
               Hacés el pago y ponemos manos a la obra.
             </p>
-          </div>
+          
           <figure className="card__figure">
             <WalletIcon className="card__img" style={{ fontSize: "60px" }} />
           </figure>
         </article>
 
         <article className="footer__article">
-          <div className="divIcons">
+        
             <p className="footer_subtitle">
               Enviamos tu pedido y mucha info para que aprendas cómo vender en
               el mundo herbal.
             </p>
-          </div>
+         
 
           <figure className="card__figure">
             <InventoryIcon
