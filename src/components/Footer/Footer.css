@@ -1,6 +1,6 @@
 .contenedorFooter {
   width: 100%;
-  height: 305px;
+  height: 280px;
   background-color: #177f77;
   color: white;
 
@@ -51,8 +51,9 @@ ul li {
 }
 
 article h3{
-  font-size: 20px;
+  font-size: 10px;
   text-align: center;
+  margin-top: 15px;
 }
 
 a{
@@ -73,7 +74,7 @@ a{
     margin-left: 25px;
   }
   article h3{
-    font-size: 15px;
+    margin-top: 0px;
   }
   .h2Title{
     font-size: 16px;
