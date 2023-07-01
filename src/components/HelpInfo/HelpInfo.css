@@ -24,6 +24,7 @@
     /* outline: 3px solid orange; */
     width: 80%;
     height: 85%;
+    margin-left: 20px;
     
 
 }
@@ -87,6 +88,7 @@ height: 100px;
     }
     .footer_subtitle{
         font-size: 10px;
+        margin-top: 40px;
     }
     .footer__cards{
         display: grid;
@@ -95,6 +97,7 @@ height: 100px;
         width: 100%;
         margin-bottom: 15px;
     }
+   
     .footer__article{
         width: 90%;
         flex-wrap: nowrap;
