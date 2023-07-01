@@ -82,9 +82,7 @@ height: 100px;
 .divIcons{
     height: 150px;
 }
-.card__figure{
-    margin: 0 0 1rem !important;
-}
+
 @media (max-width: 767px){
     .container__help{
         margin-top: 0px;
@@ -99,7 +97,7 @@ height: 100px;
     }
     .footer_subtitle{
         font-size: 10px;
-        margin-top: 40px;
+        margin-top: 30px;
     }
     .footer_subtitle--top{
         font-size: 10px;
@@ -125,7 +123,7 @@ height: 100px;
     }
     .card__figure{
        
-        height: 35px;
+        height: 60px;
     }
     
 }
