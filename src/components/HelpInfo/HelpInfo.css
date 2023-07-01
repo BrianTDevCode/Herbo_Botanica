@@ -58,7 +58,7 @@ height: 100px;
 .footer_subtitle{
     
     margin-top: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     font-size: 16px;
     color: #177f77;
     font-weight: bolder;
@@ -80,7 +80,10 @@ height: 100px;
 }
 
 .divIcons{
-    height: 200px;
+    height: 150px;
+}
+.card__figure{
+    margin: 0 0 1rem !important;
 }
 @media (max-width: 767px){
     .container__help{
@@ -119,6 +122,9 @@ height: 100px;
     .divIcons{
         height: 95px;
         
+    }
+    .card__figure{
+        margin: 0 0 -2rem !important;
     }
     
 }
