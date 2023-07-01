@@ -62,9 +62,9 @@ export const HomePage = () => {
           Bach y otros sistemas. ¡Nos encanta lo que hacemos y esperamos que
           nuestros productos te ayuden a ti y a tus mascotas!
         </p>
-        <figure className="home__figure">
+        {/* <figure className="home__figure">
           <img src={home__svg} alt="home" className="home__svg" />
-        </figure>
+        </figure> */}
       </section>
 
       <HelpInfo />

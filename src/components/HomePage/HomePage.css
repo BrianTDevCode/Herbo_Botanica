@@ -10,10 +10,9 @@
 
 .home__info {
   display: flex;
-  margin-top: 30px;
+  margin-top: 45px;
   height: 300px;
   width: 100%;
-  margin-bottom: 150px;
   flex-direction: column;
   /* outline: 3px solid orange; */
 }
@@ -41,7 +40,7 @@
   line-height: 28px;
   text-align: center;
 
-  margin-top: 65px;
+  margin-top: 35px;
   /* outline: 3px solid red; */
 
   /* width: 100%; */
@@ -75,6 +74,7 @@
 
   .home__description {
     font-size: 13px;
+    margin-top: -40px;
     line-height: 18px;
     font-weight: 500;
   }

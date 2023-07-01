@@ -40,7 +40,8 @@ ul li {
 }
 
 .h2Title {
-  text-align: center;
+  margin-left: 30px;
+  margin-bottom: 15px;
 }
 
 /* Ajustar el tamaño de los iconos */
