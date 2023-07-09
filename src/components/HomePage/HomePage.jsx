@@ -8,6 +8,7 @@ import "./HomePage.css";
 import { HelpInfo } from "../HelpInfo/HelpInfo";
 import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
 import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
+import { CarouselHomePageMobile } from "../CarouselHomePageMobile/CarouselHomePageMobile";
 
 export const HomePage = () => {
   const [show, setShow] = useState(false);
@@ -47,8 +48,12 @@ export const HomePage = () => {
 
   return (
     <main className="container">
-      <div className="div__carrusel">
-        <CarouselHomePage />
+      <div className="div__carrusel--desktop">
+        <CarouselHomePage/>
+      </div>
+
+      <div className="div__carrusel--mobile">
+        <CarouselHomePageMobile/>
       </div>
 
       <section className="home__info">
@@ -62,9 +67,6 @@ export const HomePage = () => {
           Bach y otros sistemas. ¡Nos encanta lo que hacemos y esperamos que
           nuestros productos te ayuden a ti y a tus mascotas!
         </p>
-        {/* <figure className="home__figure">
-          <img src={home__svg} alt="home" className="home__svg" />
-        </figure> */}
       </section>
 
       <HelpInfo />
