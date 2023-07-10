@@ -59,7 +59,8 @@ export const HomePage = () => {
       <section className="home__info">
         <h1>Bienvenidx a la Magia Herbal</h1>
         <p className="home__description">
-        Nuestro propósito desde Herbo es aprovechar al máximo los innumerables beneficios que nos ofrecen las plantas y acercarlos a todos aquellos que vivimos en la ciudad, tanto a humanos como a animales. Únete a nosotros en este viaje hacia una vida más natural y descubre cómo las plantas pueden transformar tu bienestar y el de tus seres queridos, tanto humanos como animales. En Herbo, estamos comprometidos con tu salud y felicidad, y nos encantaría ser parte de tu camino hacia un estilo de vida más natural y consciente.
+        Bienvenidx a la Magia Herbal
+        Nuestro propósito desde Herbo es valernos de los beneficios de las plantas y acercarlos a quienes habitamos en la ciudad: humanos y animales.
         </p>
         <h3>¿Queres que seamos parte de tu proyecto?</h3>
         
