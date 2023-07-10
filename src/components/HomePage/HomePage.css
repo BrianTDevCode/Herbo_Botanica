@@ -22,7 +22,7 @@
   height: auto;
   width: 100%;
   flex-direction: column;
-  margin-bottom: 8vh;
+  margin-bottom: 2vh;
   /* outline: 3px solid orange; */
 }
 
@@ -119,7 +119,7 @@
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
   .home__info{
-    margin-top: 37vh;
+    margin-top: 24vh;
    
     
   }
