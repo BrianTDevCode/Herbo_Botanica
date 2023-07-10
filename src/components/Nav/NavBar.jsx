@@ -133,7 +133,7 @@ const NavBar = () => {
             </li>
             <li className="header__li">
               <Link className="header__link" to={`listaproductos/Aromaterapia`}>
-                Aromaterapias
+                Aromaterapia
               </Link>
               <ul className="header__sub-ul">
                 <li className="header__sub-li">

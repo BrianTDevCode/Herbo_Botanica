@@ -177,7 +177,7 @@ export const ModalNavbarMobile = ({ show, handleClose }) => {
                     to={`listaproductos/Aromaterapia`}
                     onClick={() => handleClose()}
                   >
-                    <p className="navMobile__cat"> Aromaterapias</p>
+                    <p className="navMobile__cat"> Aromaterapia</p>
                   </Link>
                   <button onClick={() => showSubCat("ul__arpmaterapias")}>
                     <KeyboardArrowDownIcon className="navMobile__itemIcon" />
