@@ -1,5 +1,11 @@
 /* color: #177f77; */
 .container__help {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+container__help2{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -40,6 +46,9 @@
 
 
 @media (max-width: 770px) {
+  .container__help2{
+    display: none;
+  }
     .div__help {
         display: block;
       }

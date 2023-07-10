@@ -57,16 +57,12 @@ export const HomePage = () => {
       </div>
 
       <section className="home__info">
+        <h1>Bienvenidx a la Magia Herbal</h1>
         <p className="home__description">
-          Hola! Queríamos compartir contigo que hace unos años, creamos Herbo
-          con la intención de acercar las propiedades de las plantas a nuestro
-          día a día y convertirlas en aliados herbales para nuestra salud y
-          bienestar. Con el tiempo, además de desarrollar productos para las
-          personas, agregamos la línea de Herbo Pets, donde acompañamos las
-          emociones de nuestros amigos peludos a través de goteros florales de
-          Bach y otros sistemas. ¡Nos encanta lo que hacemos y esperamos que
-          nuestros productos te ayuden a ti y a tus mascotas!
+          Nuestro proposito desde Herbo es valernos de los beneficios de las plantas y acercarlos a quienes habitamos en la ciudad: humanos y animales.
         </p>
+        <h3>¿Queres que seamos parte de tu proyecto?</h3>
+        
       </section>
 
       <HelpInfo />
