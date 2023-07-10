@@ -19,9 +19,10 @@
 .home__info {
   display: flex;
   margin-top: 45px;
-  height: 300px;
+  height: auto;
   width: 100%;
   flex-direction: column;
+  margin-bottom: 8vh;
   /* outline: 3px solid orange; */
 }
 
@@ -80,6 +81,8 @@
   .div__carrusel--desktop{
     display: block;
   }
+
+
 }
 
 
@@ -94,9 +97,8 @@
     margin-top: 0px;
     line-height: 18px;
     font-weight: 500;
-    position: absolute;
-    top: 80%;
-  }
+  
+  } 
   .home__figure {
     width: 200px;
     height: 190px;
@@ -104,17 +106,31 @@
     bottom: 55%;
     left: 30%;
   }
-  .home__info{
-    margin-bottom: 40%;
-    margin-top: 0px;
-    height: 250px;
-    position: relative;
-  }
+
   
 }
 
 
-@media (max-width: 400px) {
-
- 
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .home__info{
+    margin-top: 47vh;   
+  }
 }
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .home__info{
+    margin-top: 37vh;
+   
+    
+  }
+}
+  
+  @media screen and (min-width: 300px) and (max-width: 374px) {
+    .home__info{
+      margin-top: 27vh;
+      margin-bottom: 0;
+     
+      
+    }
+   
+  }
