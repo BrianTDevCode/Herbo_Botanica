@@ -113,21 +113,20 @@
 
 @media screen and (min-width: 376px) and (max-width: 767px) {
   .home__info{
-    margin-top: 47vh;   
+    margin-top: -14vh;   
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
   .home__info{
-    margin-top: 24vh;
-   
-    
+    margin-top: -11vh;
+    margin-bottom: 1vh; 
   }
 }
   
   @media screen and (min-width: 300px) and (max-width: 374px) {
     .home__info{
-      margin-top: 27vh;
+      margin-top: -18vh;
       margin-bottom: 0;
      
       
