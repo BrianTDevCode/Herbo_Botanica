@@ -59,7 +59,6 @@ export const HomePage = () => {
       <section className="home__info">
         <h1>Bienvenidx a la Magia Herbal</h1>
         <p className="home__description">
-        Bienvenidx a la Magia Herbal
         Nuestro propósito desde Herbo es valernos de los beneficios de las plantas y acercarlos a quienes habitamos en la ciudad: humanos y animales.
         </p>
         <h3>¿Queres que seamos parte de tu proyecto?</h3>
