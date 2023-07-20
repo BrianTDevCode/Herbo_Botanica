@@ -21,6 +21,10 @@ h3{
   display: none;
 }
 
+.div__carrusel--mobile{
+  /* display: none; */
+  margin-bottom: 10px;
+}
 
 .home__info {
   display: flex;
@@ -119,13 +123,13 @@ h3{
 
 @media screen and (min-width: 376px) and (max-width: 767px) {
   .home__info{
-    margin-top: 35px;   
+    margin-top: 30px;   
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
   .home__info{
-    margin-top: 35px;
+    margin-top: 30px;
     margin-bottom: 8vh; 
   }
   h1{
