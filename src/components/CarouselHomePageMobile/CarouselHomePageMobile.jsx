@@ -3,38 +3,29 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import bannerMobile1 from "../../assets/bamnerMobile1.png";
 import bannerMobile2 from "../../assets/bamnerMobile2.png";
 
+import Carousel from "react-bootstrap/Carousel";
 
 export const CarouselHomePageMobile = () => {
   return (
-
-    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-    <div className="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    </div>
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-      <figure className="bannerfigure">
-              <img
-                src={bannerMobile1}
-                className="d-block w-100  bannerimg"
-                alt="banner"
-              />
-            </figure>
-      </div>
-      <div className="carousel-item">
-      <figure className="bannerfigure">
-              <img
-                src={bannerMobile2}
-                className="d-block w-100 bannerimg"
-                alt="banner"
-              />
-            </figure>
-      </div>
-
-    </div>
-
-  </div>
-   
+    <Carousel controls={false}>
+      <Carousel.Item>
+        <figure className="banner__figure">
+          <img
+            src={bannerMobile1}
+            className="d-block w-100 banner__img"
+            alt="banner"
+          />
+        </figure>
+      </Carousel.Item>
+      <Carousel.Item>
+        <figure className="banner__figure">
+          <img
+            src={bannerMobile2}
+            className="d-block w-100 banner__img"
+            alt="banner"
+          />
+        </figure>
+      </Carousel.Item>
+    </Carousel>
   );
 };
