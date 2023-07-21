@@ -6,7 +6,7 @@ import App from './App.jsx';
 const rootElement = document.getElementById('root');
 
 createRoot(rootElement).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );

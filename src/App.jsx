@@ -7,6 +7,7 @@ import { ProductListContainer } from "./components/ProductListContainer/ProductL
 import { ModalCheckout } from "./components/ModalCheckout/ModalCheckout";
 import Footer from "./components/Footer/Footer";
 
+
 const App = () => {
 
   return (

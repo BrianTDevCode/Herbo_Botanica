@@ -16,6 +16,8 @@ import Paper from "@mui/material/Paper";
 import { Spinner } from "../Spinner/spinner";
 import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
 import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
+import {Helmet} from "react-helmet";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -73,6 +75,11 @@ export const ProductListContainer = () => {
       <Spinner />
     </div>
   ) : (
+    <>
+    <Helmet>
+      <meta name="description" content="Nuestro propósito desde Herbo es valernos de los beneficios de las plantas y acercarlos a quienes habitamos en la ciudad: humanos y animales." />
+      <meta name="keywords" content="herboristería, botánica, productos naturales, hierbas medicinales, tés, aceites esenciales, bienestar, salud, belleza, remedios naturales"/>
+    </Helmet>
     <div className="products__container">
       {products.map((prod) => {
         return <ProductCard key={prod.id} data={prod} />;
@@ -80,5 +87,6 @@ export const ProductListContainer = () => {
       <BtnCatalog />
       <BtnWhatsapp />
     </div>
+    </>
   );
 };

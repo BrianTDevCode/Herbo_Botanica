@@ -10,6 +10,9 @@ import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
 import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
 import { CarouselHomePageMobile } from "../CarouselHomePageMobile/CarouselHomePageMobile";
 
+import {Helmet} from "react-helmet";
+
+
 export const HomePage = () => {
   const [show, setShow] = useState(false);
 
@@ -47,7 +50,12 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <main className="container">
+    <>
+    <Helmet>
+      <meta name="description" content="Nuestro propósito desde Herbo es valernos de los beneficios de las plantas y acercarlos a quienes habitamos en la ciudad: humanos y animales." />
+      <meta name="keywords" content="herboristería, botánica, productos naturales, hierbas medicinales, tés, aceites esenciales, bienestar, salud, belleza, remedios naturales"/>
+    </Helmet>
+      <main className="container">
       <div className="div__carrusel--desktop">
         <CarouselHomePage/>
       </div>
@@ -69,5 +77,7 @@ export const HomePage = () => {
       <BtnCatalog />
       <BtnWhatsapp />
     </main>
+    </>
+  
   );
 };

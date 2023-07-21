@@ -13,6 +13,8 @@ import logo from "../../assets/Logo_blanco.png";
 import "./ModalCheckout.css";
 import { BtnWhatsapp } from "../../BtnWhatsapp/BtnWhatsapp";
 import { BtnCatalog } from "../../BtnCatalog/BtnCatalog";
+import {Helmet} from "react-helmet";
+
 
 
 export const ModalCheckout = () => {
@@ -156,6 +158,11 @@ export const ModalCheckout = () => {
   };
 
   return items.length > 0 ? (
+    <>
+    <Helmet>
+      <meta name="description" content="Nuestro propósito desde Herbo es valernos de los beneficios de las plantas y acercarlos a quienes habitamos en la ciudad: humanos y animales." />
+      <meta name="keywords" content="herboristería, botánica, productos naturales, hierbas medicinales, tés, aceites esenciales, bienestar, salud, belleza, remedios naturales"/>
+    </Helmet>
     <section className="container checkout__container">
       <div className="checkout__header">
         <figure className="checkout__figure">
@@ -383,6 +390,7 @@ export const ModalCheckout = () => {
       <BtnCatalog />
       <BtnWhatsapp />
     </section>
+    </>
   ) : (
     <Navigate to="/" />
   );
